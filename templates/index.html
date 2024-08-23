@@ -1,6 +1,6 @@
 {% extends "_base.html" %}
-{% load static %}
 
+{% load static i18n %}
 
 {% block content %}
   
@@ -11,12 +11,13 @@
         <div class="container-fluid">
           <div class="row">
             <div class="col-md-12">
-              <div class="banner-item" style="background-image: url( 'static/images/banner-image1.jpg' ); background-repeat: no-repeat; background-position: right; height: 682px;">
+              <div class="banner-item" style="background-image: url( 'static/images/hero-inex.jpg'); background-repeat: no-repeat; background-position: right; height: 682px;">
                 <div class="banner-content padding-large">
-                  <h1 class="display-1 text-uppercase text-dark pb-2">wooden table set</h1>
-                  <p>Aliquet donec ut arcu risus amet mattis diam gravida. Ac vestibulum quis proin in aliquam et et auctor. Amet urna est arcu euismod egestas morbi nunc lacus. Nec id rutrum mauris commodo habitant amet quisque. Velit ornare pellentesque facilisi in odio nibh.</p>                      
+                  <h1 class="display-1 text-uppercase text-dark pb-2">Interior design</h1>
+                  <p>{% trans "Transform your space with our expert interior design services. We specialize in creating harmonious environments that reflect your unique style and enhance functionality. From concept to completion, our team blends aesthetics with practicality, ensuring every detail is tailored to your needs. Discover the art of living beautifully with us today" %}!
+                  </p>                                         
                   <a href="shop.html" class="btn btn-medium btn-arrow position-relative mt-5">
-                    <span class="text-uppercase">Shop Now</span>            
+                    <span class="text-uppercase">{% trans "See projects" %}</span>            
                     <svg class="arrow-right position-absolute" width="18" height="20">
                       <use xlink:href="#arrow-right"></use>
                     </svg>
@@ -27,17 +28,17 @@
           </div>
         </div>
       </div>
+
       <div class="swiper-slide">
         <div class="container-fluid">
           <div class="row">
             <div class="col-md-12">
-              <div class="banner-item" style="background-image: url( 'statc/images/banner-image1.jpg'); background-repeat: no-repeat; background-position: right; height: 682px;">
+              <div class="banner-item" style="background-image: url( 'static/images/hero-inex-2.jpg' ); background-repeat: no-repeat; background-position: right; height: 682px;">
                 <div class="banner-content padding-large">
-                  <h1 class="display-1 text-uppercase text-dark pb-2">Comfortable Sofa Set</h1>
-                  <p>Aliquet donec ut arcu risus amet mattis diam gravida. Ac vestibulum quis proin in aliquam et et auctor. Amet urna est arcu euismod egestas morbi nunc lacus. Nec id rutrum mauris commodo habitant amet quisque. Velit ornare pellentesque facilisi in odio nibh.
-                  </p>                                         
+                  <h1 class="display-1 text-uppercase text-dark pb-2">Exterior design</h1>
+                  <p>{% trans "Elevate your property’s curb appeal with our exceptional exterior design services. We specialize in crafting stunning facades and outdoor spaces that harmonize with nature and your lifestyle. From landscaping to architectural enhancements, our team creates inviting environments that reflect your vision. Transform your home’s exterior into a masterpiece today" %}!</p>
                   <a href="shop.html" class="btn btn-medium btn-arrow position-relative mt-5">
-                    <span class="text-uppercase">Shop Now</span>            
+                    <span class="text-uppercase">{% trans "See projects" %}</span>            
                     <svg class="arrow-right position-absolute" width="18" height="20">
                       <use xlink:href="#arrow-right"></use>
                     </svg>
@@ -48,12 +49,13 @@
           </div>
         </div>
       </div>
+      
     </div>
   </div>
   <div class="swiper-pagination position-absolute"></div>
 </section>
-
 <section id="company-services" class="padding-large">
+  {% comment %}
   <div class="container-fluid">
     <div class="row">
       <div class="col-lg-3 col-md-6 pb-3">
@@ -106,28 +108,31 @@
       </div>
     </div>
   </div>
+  {% endcomment %}
 </section>
-
 <section id="about-us">
   <div class="container-fluid">
     <div class="row align-items-center justify-content-between g-5">
       <div class="col-lg-6">
         <div class="image-holder mb-4 jarallax">
-            <img src="{% static 'images/single-image1.jpg' %}" alt="single" class="img-fluid jarallax-img">
+            <img src="{% static 'images/about-us-m-2.jpg' %}" alt="single" class="img-fluid jarallax-img">
         </div>
       </div>
       <div class="col-lg-6">
         <div class="detail p-5">
           <div class="display-header">
-            <h2 class="display-2 text-uppercase text-dark pb-2">About Us</h2>
-            <p class="pb-3">Ac varius lectus tellus tellus quisque tristique aenean. Volutpat velit nulla eu iaculis risus in urna. Eu morbi vel purus velit dui vel egestas purus sed. Eget turpis tincidunt faucibus montes arcu in nullam tortor orci. Nulla tellus sed purus vestibulum sagittis pretium donec nec mattis ollis porta sit ut.</p>
-            <p>Facilisi ut vulputate volutpat a aliquet. Facilisis sed quis pretium amet hac. Justo tristique sagittis sodales viverra venenatis integer fringilla. </p>
+            <h2 class="display-2 text-uppercase text-dark pb-2">{% trans "About us" %}</h2>
+            <p class="pb-3"><span class="lead">{% trans "Mahmoud Rahmatollahi" %}</span> {% trans "is a seasoned interior and exterior designer with over 20 years of experience. Renowned for his innovative designs, he leads a skilled team specializing in construction and renovation." %}</p>
+            <p>{% trans "Together, they transform spaces into stunning environments, blending functionality with aesthetics to create unique, personalized settings for every client." %}</p>
+            {% comment %}
             <a href="about-us.html" class="btn btn-medium btn-arrow outline-dark position-relative mt-3">
+                
               <span class="text-uppercase">About us</span>            
               <svg class="arrow-right position-absolute" width="18" height="20">
                 <use xlink:href="#arrow-right"></use>
               </svg>
             </a>  
+            {% endcomment %}
           </div>
         </div>
       </div>
@@ -139,9 +144,9 @@
   <div class="container-fluid">
     <div class="row">
       <div class="display-header pb-3 d-flex justify-content-between flex-wrap col-md-12">
-        <h2 class="display-2 text-dark text-uppercase">Our Featured Products</h2> 
+        <h2 class="display-2 text-dark text-uppercase">{% trans "Our Featured Projects" %}</h2> 
         <a href="shop.html" class="btn btn-medium btn-arrow btn-normal position-relative">
-          <span class="text-uppercase">Shop All</span>            
+          <span class="text-uppercase">{% trans "See All" %}</span>            
           <svg class="arrow-right position-absolute" width="18" height="20">
             <use xlink:href="#arrow-right"></use>
           </svg>
@@ -152,6 +157,8 @@
       <div id="featured-swiper" class="product-swiper col-md-12">
         <div class="swiper">
           <div class="swiper-wrapper">
+            {% for item in '123456' %}               
+            
             <div class="swiper-slide">
               <div class="product-card image-zoom-effect link-effect d-flex flex-wrap">
                 <div class="image-holder">
@@ -162,96 +169,15 @@
                     <a href="single-product.html" class="text-primary">Black Sofa Set</a>
                   </h3>
                   <div class="cart-info">
-                    <a class="pseudo-text-effect" href="#" data-after="ADD TO CART"><span>$200</span></a>
+                    <a class="pseudo-text-effect" href="#" data-after="DETAILS"><span>category</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="swiper-slide">
-              <div class="product-card image-zoom-effect link-effect d-flex flex-wrap">
-                <div class="image-holder">
-                  <img src="{% static 'images/product-item2.jpg' %}" alt="product-item" class="product-image img-fluid">
-                </div>
-                <div class="cart-concern">
-                  <h3 class="card-title text-uppercase pt-3 text-primary">
-                    <a href="single-product.html" class="text-primary">Circle Dining Table</a>
-                  </h3>
-                  <div class="cart-info">
-                    <a class="pseudo-text-effect" href="#" data-after="ADD TO CART">
-                      <span>$200</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="product-card image-zoom-effect link-effect d-flex flex-wrap">
-                <div class="image-holder">
-                  <img src="{% static 'images/product-item3.jpg' %}" alt="product-item" class="product-image img-fluid">
-                </div>
-                <div class="cart-concern">
-                  <h3 class="card-title text-uppercase pt-3 text-primary">
-                    <a href="single-product.html" class="text-primary">Minimal Sofa</a>
-                  </h3>
-                  <div class="cart-info">
-                    <a class="pseudo-text-effect" href="#" data-after="ADD TO CART">
-                      <span>$200</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="product-card image-zoom-effect link-effect d-flex flex-wrap">
-                <div class="image-holder">
-                  <img src="{% static 'images/product-item4.jpg' %}" alt="product-item" class="product-image img-fluid">
-                </div>
-                <div class="cart-concern">
-                  <h3 class="card-title text-uppercase pt-3 text-primary">
-                    <a href="single-product.html" class="text-primary">Pattern Tea Table</a>
-                  </h3>
-                  <div class="cart-info">
-                    <a class="pseudo-text-effect" href="#" data-after="ADD TO CART">
-                      <span>$200</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="product-card image-zoom-effect link-effect d-flex flex-wrap">
-                <div class="image-holder">
-                  <img src="{% static 'images/product-item5.jpg' %}" alt="product-item" class="product-image img-fluid">
-                </div>
-                <div class="cart-concern">
-                  <h3 class="card-title text-uppercase pt-3 text-primary">
-                    <a href="single-product.html" class="text-primary">Black Sofa Set</a>
-                  </h3>
-                  <div class="cart-info">
-                    <a class="pseudo-text-effect" href="#" data-after="ADD TO CART">
-                      <span>$200</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="product-card image-zoom-effect link-effect d-flex flex-wrap">
-                <div class="image-holder">
-                  <img src="{% static 'images/product-item6.jpg' %}" alt="product-item" class="product-image img-fluid">
-                </div>
-                <div class="cart-concern">
-                  <h3 class="card-title text-uppercase pt-3 text-primary">
-                    <a href="single-product.html" class="text-primary">Minimal Sofa</a>
-                  </h3>
-                  <div class="cart-info">
-                    <a class="pseudo-text-effect" href="#" data-after="ADD TO CART">
-                      <span>$200</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
+            {% endfor %}
+
+            
+            
           </div>
         </div>
         <div class="swiper-pagination text-center mt-5"></div>
@@ -279,18 +205,27 @@
             <div class="swiper-slide text-center d-flex justify-content-center">
               <div class="review-item col-md-10">
                 <i class="icon icon-review"></i>
-                <blockquote class="fs-4">“Tempus oncu enim pellen tesque este pretium in neque, elit morbi sagittis lorem habi mattis Pellen tesque pretium feugiat vel morbi suspen dise sagittis lorem habi tasse morbi.”</blockquote>
+                <blockquote class="fs-4">“{% trans 'Architecture is the learned game, correct and magnificent, of forms assembled in the light.' %}”</blockquote>
                 <div class="author-detail">
-                  <div class="name text-primary text-uppercase pt-2">Hana Kimusaki</div>
+                  <div class="name text-primary text-uppercase pt-2">{% trans "Le Corbusier" %}</div>
                 </div>
               </div>
             </div>
             <div class="swiper-slide text-center d-flex justify-content-center">
               <div class="review-item col-md-10">
                 <i class="icon icon-review"></i>
-                <blockquote class="fs-4">“A blog is a digital publication that can complement a website or exist independently. A blog may include articles, short posts, listicles, infographics, videos, and other digital content.”</blockquote>
+                <blockquote class="fs-4">“{% trans 'Good design is a lot like clear thinking made visual' %}.”</blockquote>
                 <div class="author-detail">
-                  <div class="name text-primary text-uppercase pt-2">Jennie Rose</div>
+                  <div class="name text-primary text-uppercase pt-2">{% trans "Ellen Lupton" %}</div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide text-center d-flex justify-content-center">
+              <div class="review-item col-md-10">
+                <i class="icon icon-review"></i>
+                <blockquote class="fs-4">“{% trans 'Architecture is the art of how to waste space' %}.”</blockquote>
+                <div class="author-detail">
+                  <div class="name text-primary text-uppercase pt-2">{% trans "Philip Johnson" %}</div>
                 </div>
               </div>
             </div>
@@ -306,6 +241,7 @@
   </div>      
   <div class="swiper-pagination text-center position-absolute"></div>
 </section>
+{% comment %}
 
 <section id="collections" class="position-relative padding-large">
   <div class="container-fluid">
@@ -637,6 +573,7 @@
     </div>
   </div>
 </section>
+{% endcomment %}
 
 <section id="brand-collection" class="padding-small border-top border-bottom overflow-hidden margin-large mb-0">
   <div class="container">

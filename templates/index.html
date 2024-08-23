@@ -140,7 +140,7 @@
   </div>
 </section>
 
-<section id="featured-products" class="product-store position-relative padding-large">
+<section id="featured-projects" class="product-store position-relative padding-large">
   <div class="container-fluid">
     <div class="row">
       <div class="display-header pb-3 d-flex justify-content-between flex-wrap col-md-12">
@@ -157,12 +157,12 @@
       <div id="featured-swiper" class="product-swiper col-md-12">
         <div class="swiper">
           <div class="swiper-wrapper">
-            {% for item in '123456' %}               
+            {% for project in projects %}               
             
             <div class="swiper-slide">
               <div class="product-card image-zoom-effect link-effect d-flex flex-wrap">
                 <div class="image-holder">
-                  <img src="{% static 'images/product-item1.jpg' %}" alt="product-item" class="product-image img-fluid">
+                  <img src="{{ project.cover_image.url }}" alt="product-item" class="product-image img-fluid">
                 </div>
                 <div class="cart-concern">
                   <h3 class="card-title text-uppercase pt-3 text-primary">
@@ -578,7 +578,9 @@
 <section id="brand-collection" class="padding-small border-top border-bottom overflow-hidden margin-large mb-0">
   <div class="container">
     <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
-        <a href="#"><img src="{% static 'images/brand-logo-1.svg' %}" alt="brand"></a>
+      {% for client in clients %}        
+      <a href="#"><img src="{{ client.logo.url }}" alt="brand" height="60px" width="auto"></a>
+      {% endfor %}
         <a href="#"><img src="{% static 'images/brand-logo-2.svg' %}" alt="brand"></a>
         <a href="#"><img src="{% static 'images/brand-logo-3.svg' %}" alt="brand"></a>
         <a href="#"><img src="{% static 'images/brand-logo-4.svg' %}" alt="brand"></a>

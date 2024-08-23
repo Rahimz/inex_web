@@ -166,10 +166,10 @@
                 </div>
                 <div class="cart-concern">
                   <h3 class="card-title text-uppercase pt-3 text-primary">
-                    <a href="single-product.html" class="text-primary">Black Sofa Set</a>
+                    <a href="single-product.html" class="text-primary">{{ project.name }}</a>
                   </h3>
                   <div class="cart-info">
-                    <a class="pseudo-text-effect" href="#" data-after="DETAILS"><span>category</span></a>
+                    <a class="pseudo-text-effect" href="#" data-after="DETAILS"><span>{{ project.category }}</span></a>
                   </div>
                 </div>
               </div>
@@ -581,10 +581,12 @@
       {% for client in clients %}        
       <a href="#"><img src="{{ client.logo.url }}" alt="brand" height="60px" width="auto"></a>
       {% endfor %}
-        <a href="#"><img src="{% static 'images/brand-logo-2.svg' %}" alt="brand"></a>
-        <a href="#"><img src="{% static 'images/brand-logo-3.svg' %}" alt="brand"></a>
-        <a href="#"><img src="{% static 'images/brand-logo-4.svg' %}" alt="brand"></a>
-        <a href="#"><img src="{% static 'images/brand-logo-5.svg' %}" alt="brand"></a>
+      {% comment %}        
+      <a href="#"><img src="{% static 'images/brand-logo-2.svg' %}" alt="brand"></a>
+      <a href="#"><img src="{% static 'images/brand-logo-3.svg' %}" alt="brand"></a>
+      <a href="#"><img src="{% static 'images/brand-logo-4.svg' %}" alt="brand"></a>
+      <a href="#"><img src="{% static 'images/brand-logo-5.svg' %}" alt="brand"></a>
+      {% endcomment %}
     </div>
   </div>
 </section>

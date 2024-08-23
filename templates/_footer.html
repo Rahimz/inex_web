@@ -1,52 +1,71 @@
-<footer class="footer-custom text-white text-center text-lg-start fixed-bottom">
-    <!-- Grid container -->
-    <div class="container p-2">
-      <!--Grid row-->
-      <div class="row">
-        <!--Grid column-->
-        <div class="col-6 ">
-          <h5 class="text-uppercase">About Us</h5>
-  
-          <p>
-            FlexRoadShield is a company established in Ontario that makes a new, affordable and high-level models of Flexible Guardrails and Roadside Barriers
+{% load static %}
+<div class="container-fluid">
+  <div class="row">
+    <div class="row d-flex flex-wrap justify-content-between">
+      <div class="col-lg-3 col-sm-6 pb-3 pe-4">
+        <div class="footer-menu">
+          <img src="{% static 'images/main-logo.png' %}" alt="logo" class="pb-3">
+          <p>Mi facilisis facilisis orci vitae. Cum nisi morbi integer tincidunt ornare ac praesent in. Dolor tempus arcu sit quis nunc arcu facilisis quis eget nisi morbi integer.</p>
+        </div>
+        <div class="copyright">
+          <p>© Copyright 2023. Design by <a href="https://templatesjungle.com/">TemplatesJungle</a> Distributed by <a href="https://themewagon.com">ThemeWagon</a>
           </p>
         </div>
-        <!--Grid column-->
-  
-        <!--Grid column-->
-        <div class="col-6">
-          <h5 class="text-uppercase">ExtraLinks</h5>
-          {% comment %}
-            
-          
-          <ul class="list-unstyled mb-0">
-            <li class="nav-item">
-              <a href="{% url 'generals:about' %}" class="text-white">ABOUT US</a>
+      </div>
+      <div class="col-lg-2 col-sm-6 pb-3">
+        <div class="footer-menu text-uppercase">
+          <h5 class="widget-title pb-2">Quick Links</h5>
+          <ul class="menu-list list-unstyled text-uppercase">
+            <li class="menu-item pb-2">
+              <a href="#billboard">Home</a>
             </li>
-            <li class="nav-item">
-              <a href="{% url 'generals:projects' %}" class="text-white">PROJECTS</a>
+            <li class="menu-item pb-2">
+              <a href="#about-us">About</a>
             </li>
-            <li class="nav-item">
-              <a href="{% url 'generals:services' %}" class="text-white">SERVICES</a>
+            <li class="menu-item pb-2">
+              <a href="#company-services">Services</a>
             </li>
-            <li class="nav-item">
-              <a href="{% url 'blog:blog_home' %}" class="text-white">BLOG</a>
+            <li class="menu-item pb-2">
+              <a href="#latest-blog">Blogs</a>
             </li>
-            <li class="nav-item">
-              <a href="{% url 'contacts:contacts' %}" class="text-white">CONTACT US</a>
+            <li class="menu-item pb-2">
+              <a href="#contact">Contact</a>
             </li>
           </ul>
-          {% endcomment %}
         </div>
-        <!--Grid column-->
       </div>
-      <!--Grid row-->
+      <div class="col-lg-2 col-sm-6 pb-3">
+        <div class="footer-menu text-uppercase">
+          <h5 class="widget-title pb-2">Social</h5>
+          <div class="social-links">
+            <ul class="list-unstyled">
+              <li class="pb-2">
+                <a href="#">Facebook</a>
+              </li>
+              <li class="pb-2">
+                <a href="#">Twitter</a>
+              </li>
+              <li class="pb-2">
+                <a href="#">Pinterest</a>
+              </li>
+              <li class="pb-2">
+                <a href="#">Instagram</a>
+              </li>
+              <li>
+                <a href="#">Youtube</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6">
+        <div class="footer-menu contact-item">
+          <h5 class="widget-title text-uppercase pb-2">Contact Us</h5>
+          <p><a href="">+ 12(0) 34 56 78 910</a></p>
+          <p><a href="mailto:">hello@templatesjungle.com</a></p>
+          <p>tea berry, marinette, USA</p>
+        </div>
+      </div>
     </div>
-    <!-- Grid container -->
-    <!-- Copyright -->
-    <div class="text-center p-2">
-      © 2023 Copyright: All Reserved!
-      <a class="text-white" href="https://FlexRoadShield.com/">FlexRoadShield.com</a>
-    </div>
-    <!-- Copyright -->
-  </footer>
+  </div>
+</div>

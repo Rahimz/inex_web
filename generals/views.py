@@ -8,6 +8,6 @@ def HomeView(request):
     )
     return render(
         request,
-        'home.html',
+        'index.html',
         context
     )

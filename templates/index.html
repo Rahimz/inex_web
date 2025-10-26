@@ -16,7 +16,7 @@
                   <h1 class="display-1 text-uppercase text-dark pb-2">Interior design</h1>
                   <p>{% trans "Transform your space with our expert interior design services. We specialize in creating harmonious environments that reflect your unique style and enhance functionality. From concept to completion, our team blends aesthetics with practicality, ensuring every detail is tailored to your needs. Discover the art of living beautifully with us today" %}!
                   </p>                                         
-                  <a href="shop.html" class="btn btn-medium btn-arrow position-relative mt-5">
+                  <a href="{% url 'projects:projects_list' %}" class="btn btn-medium btn-arrow position-relative mt-5">
                     <span class="text-uppercase">{% trans "See projects" %}</span>            
                     <svg class="arrow-right position-absolute" width="18" height="20">
                       <use xlink:href="#arrow-right"></use>
@@ -37,7 +37,7 @@
                 <div class="banner-content padding-large">
                   <h1 class="display-1 text-uppercase text-dark pb-2">Exterior design</h1>
                   <p>{% trans "Elevate your property’s curb appeal with our exceptional exterior design services. We specialize in crafting stunning facades and outdoor spaces that harmonize with nature and your lifestyle. From landscaping to architectural enhancements, our team creates inviting environments that reflect your vision. Transform your home’s exterior into a masterpiece today" %}!</p>
-                  <a href="shop.html" class="btn btn-medium btn-arrow position-relative mt-5">
+                  <a href="{% url 'projects:projects_list' %}" class="btn btn-medium btn-arrow position-relative mt-5">
                     <span class="text-uppercase">{% trans "See projects" %}</span>            
                     <svg class="arrow-right position-absolute" width="18" height="20">
                       <use xlink:href="#arrow-right"></use>
@@ -145,7 +145,7 @@
     <div class="row">
       <div class="display-header pb-3 d-flex justify-content-between flex-wrap col-md-12">
         <h2 class="display-2 text-dark text-uppercase">{% trans "Our Featured Projects" %}</h2> 
-        <a href="shop.html" class="btn btn-medium btn-arrow btn-normal position-relative">
+        <a href="{% url 'projects:projects_list' %}" class="btn btn-medium btn-arrow btn-normal position-relative">
           <span class="text-uppercase">{% trans "See All" %}</span>            
           <svg class="arrow-right position-absolute" width="18" height="20">
             <use xlink:href="#arrow-right"></use>
@@ -166,10 +166,10 @@
                 </div>
                 <div class="cart-concern">
                   <h3 class="card-title text-uppercase pt-3 text-primary">
-                    <a href="single-product.html" class="text-primary">{{ project.name }}</a>
+                    <a href="{% url 'projects:project_details' project.slug %}" class="text-primary">{{ project.name }}</a>
                   </h3>
                   <div class="cart-info">
-                    <a class="pseudo-text-effect" href="#" data-after="DETAILS"><span>{{ project.category }}</span></a>
+                    <a class="pseudo-text-effect" href="{% url 'projects:project_details' project.slug %}" data-after="DETAILS"><span>{{ project.category }}</span></a>
                   </div>
                 </div>
               </div>
@@ -252,7 +252,7 @@
             <div class="product-card">
               <div class="card-detail d-flex justify-content-between align-items-baseline pt-3">
                 <h3 class="card-title text-uppercase">
-                  <a href="shop.html">Living Rooms</a>
+                  <a href="{% url 'projects:projects_list' %}">Living Rooms</a>
                 </h3>
               </div>
               <div class="image-overlay position-relative">
@@ -278,7 +278,7 @@
             <div class="product-card">
               <div class="card-detail d-flex justify-content-between align-items-baseline pt-3">
                 <h3 class="card-title text-uppercase">
-                  <a href="shop.html">Bed Rooms</a>
+                  <a href="{% url 'projects:projects_list' %}">Bed Rooms</a>
                 </h3>
               </div>
               <div class="image-overlay position-relative">
@@ -306,7 +306,7 @@
             <div class="product-card">
               <div class="card-detail d-flex justify-content-between align-items-baseline pt-3">
                 <h3 class="card-title text-uppercase">
-                  <a href="shop.html">Kitchens</a>
+                  <a href="{% url 'projects:projects_list' %}">Kitchens</a>
                 </h3>
               </div>
               <div class="image-overlay position-relative">
@@ -334,7 +334,7 @@
             <div class="product-card">
               <div class="card-detail d-flex justify-content-between align-items-baseline pt-3">
                 <h3 class="card-title text-uppercase">
-                  <a href="shop.html">Guest Rooms</a>
+                  <a href="{% url 'projects:projects_list' %}">Guest Rooms</a>
                 </h3>
               </div>
               <div class="image-overlay position-relative">
@@ -388,7 +388,7 @@
     <div class="row overflow-hidden">
       <div class="display-header pb-3 d-flex justify-content-between col-md-12">
         <h2 class="display-2 text-dark text-uppercase">Trending products</h2>
-        <a href="shop.html" class="btn btn-medium btn-arrow btn-normal position-relative">
+        <a href="{% url 'projects:projects_list' %}" class="btn btn-medium btn-arrow btn-normal position-relative">
           <span class="text-uppercase">Shop all</span> 
           <svg class="arrow-right position-absolute" width="18" height="20">
             <use xlink:href="#arrow-right"></use>

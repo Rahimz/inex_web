@@ -39,12 +39,12 @@
               <a class="nav-link dropdown-toggle" href="#" id="dropdownPages" data-bs-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">Projects</a>
               <ul class="dropdown-menu list-unstyled" aria-labelledby="dropdownPages">
-                <li>
-                  <a href="shop-sidebar.html" class="dropdown-item item-anchor">Project 1</a>
-                </li>
-                <li>
-                  <a href="shop-four-column.html" class="dropdown-item item-anchor">Project 2</a>
-                </li>
+                {% for project in projects_context %}
+                  <li>
+                    <a href="{% url 'projects:project_details' project.slug %}" class="dropdown-item item-anchor">{{ project.name }}</a>
+                  </li>                  
+                {% endfor %}
+                
               </ul>
             </li>
 

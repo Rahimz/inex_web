@@ -21,10 +21,11 @@ from django.conf.urls.static import static
 from django.conf.urls.i18n import i18n_patterns
 
 urlpatterns = i18n_patterns(
-    path('', include('generals.urls')),
     path('projects/', include('projects.urls')),
+    path('search/', include('search.urls')),
     path('rosetta/', include('rosetta.urls')),
     path('admin/', admin.site.urls),
+    path('', include('generals.urls')),
 )
 
 if settings.DEBUG:

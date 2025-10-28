@@ -2,6 +2,9 @@
 
 {% load static i18n %}
 
+{% block title %}{{ page_title}}{% endblock title %}
+
+
 {% block content %}
   
 <section id="billboard" class="overflow-hidden">
@@ -13,7 +16,7 @@
             <div class="col-md-12">
               <div class="banner-item" style="background-image: url( 'static/images/hero-inex.jpg'); background-repeat: no-repeat; background-position: right; height: 682px;">
                 <div class="banner-content padding-large">
-                  <h1 class="display-1 text-uppercase text-dark pb-2">Interior design</h1>
+                  <h1 class="display-1 text-uppercase text-dark pb-2">{% trans "Interior design" %}</h1>
                   <p>{% trans "Transform your space with our expert interior design services. We specialize in creating harmonious environments that reflect your unique style and enhance functionality. From concept to completion, our team blends aesthetics with practicality, ensuring every detail is tailored to your needs. Discover the art of living beautifully with us today" %}!
                   </p>                                         
                   <a href="{% url 'projects:projects_list' %}" class="btn btn-medium btn-arrow position-relative mt-5">
@@ -169,7 +172,7 @@
                     <a href="{% url 'projects:project_details' project.slug %}" class="text-primary">{{ project.name }}</a>
                   </h3>
                   <div class="cart-info">
-                    <a class="pseudo-text-effect" href="{% url 'projects:project_details' project.slug %}" data-after="DETAILS"><span>{{ project.category }}</span></a>
+                    <a class="pseudo-text-effect" href="{% url 'projects:project_details' project.slug %}" data-after="{% trans "DETAILS" %}"><span>{{ project.category }}</span></a>
                   </div>
                 </div>
               </div>

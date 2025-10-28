@@ -1,0 +1,152 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-28 10:00+0330\n"
+"PO-Revision-Date: 2025-10-28 06:30+0000\n"
+"Last-Translator:   <>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Translated-Using: django-rosetta 0.10.2\n"
+
+#: core/settings/base.py:121
+msgid "Farsi"
+msgstr "فارسی"
+
+#: core/settings/base.py:122
+msgid "English"
+msgstr ""
+
+#: generals/views.py:11 templates/_header.html:42
+msgid "Home"
+msgstr "خانه"
+
+#: projects/views.py:16 templates/_header.html:46
+msgid "Projects"
+msgstr "پروژه‌ها"
+
+#: projects/views.py:31
+msgid "Project"
+msgstr "پروژه"
+
+#: templates/_footer.html:70
+msgid "Contact Us"
+msgstr "تماس با ما"
+
+#: templates/_footer.html:73
+msgid "Tehran, Iran"
+msgstr "تهران، ایران"
+
+#: templates/index.html:19
+msgid "Interior design"
+msgstr "طراحی داخلی"
+
+#: templates/index.html:20
+msgid ""
+"Transform your space with our expert interior design services. We specialize"
+" in creating harmonious environments that reflect your unique style and "
+"enhance functionality. From concept to completion, our team blends "
+"aesthetics with practicality, ensuring every detail is tailored to your "
+"needs. Discover the art of living beautifully with us today"
+msgstr ""
+"با خدمات تخصصی طراحی داخلی ما، فضای خود را متحول کنید. ما در ایجاد محیط‌های "
+"هماهنگ که منعکس کننده سبک منحصر به فرد شما هستند و عملکرد را افزایش می‌دهند،"
+" تخصص داریم. از ایده تا تکمیل، تیم ما زیبایی‌شناسی را با کاربردپذیری ترکیب "
+"می‌کند و تضمین می‌کند که هر جزئیات متناسب با نیازهای شما باشد. هنر زندگی "
+"زیبا را امروز با ما کشف کنید."
+
+#: templates/index.html:23 templates/index.html:44
+msgid "See projects"
+msgstr "دیدن پروژه‌ها"
+
+#: templates/index.html:42
+msgid ""
+"Elevate your property’s curb appeal with our exceptional exterior design "
+"services. We specialize in crafting stunning facades and outdoor spaces that"
+" harmonize with nature and your lifestyle. From landscaping to architectural"
+" enhancements, our team creates inviting environments that reflect your "
+"vision. Transform your home’s exterior into a masterpiece today"
+msgstr ""
+"با خدمات طراحی نمای بیرونی استثنایی ما، جذابیت ملک خود را افزایش دهید. ما در"
+" ساخت نماهای خیره‌کننده و فضاهای بیرونی که با طبیعت و سبک زندگی شما هماهنگ "
+"هستند، تخصص داریم. از محوطه‌سازی گرفته تا بهبودهای معماری، تیم ما محیط‌های "
+"جذابی را خلق می‌کند که منعکس‌کننده دیدگاه شما هستند. همین امروز نمای بیرونی "
+"خانه خود را به یک شاهکار تبدیل کنید."
+
+#: templates/index.html:128
+msgid "About us"
+msgstr "درباره ما"
+
+#: templates/index.html:129
+msgid "Mahmoud Rahmatollahi"
+msgstr "محمود رحمت‌الهی"
+
+#: templates/index.html:129
+msgid ""
+"is a seasoned interior and exterior designer with over 20 years of "
+"experience. Renowned for his innovative designs, he leads a skilled team "
+"specializing in construction and renovation."
+msgstr ""
+"یک طراح داخلی و خارجی باتجربه با بیش از 20 سال سابقه است. او که به خاطر "
+"طرح‌های نوآورانه‌اش مشهور است، رهبری یک تیم ماهر و متخصص در ساخت و ساز و "
+"نوسازی را بر عهده دارد."
+
+#: templates/index.html:130
+msgid ""
+"Together, they transform spaces into stunning environments, blending "
+"functionality with aesthetics to create unique, personalized settings for "
+"every client."
+msgstr ""
+"آنها در کنار هم، فضاها را به محیط‌های خیره‌کننده تبدیل می‌کنند و با ترکیب "
+"کارایی و زیبایی‌شناسی، محیطی منحصر به فرد و شخصی‌سازی‌شده برای هر مشتری "
+"ایجاد می‌کنند."
+
+#: templates/index.html:152 templates/projects/projects_list.html:13
+msgid "Our Featured Projects"
+msgstr "پروژه‌های منتخب ما"
+
+#: templates/index.html:154 templates/projects/projects_list.html:15
+msgid "See All"
+msgstr "دیدن همه"
+
+#: templates/index.html:177
+msgid "DETAILS"
+msgstr "جزییات"
+
+#: templates/index.html:213
+msgid ""
+"Architecture is the learned game, correct and magnificent, of forms "
+"assembled in the light."
+msgstr ""
+"معماری بازی آموخته‌شده، صحیح و باشکوهِ فرم‌هایی است که در نور گرد هم "
+"آمده‌اند."
+
+#: templates/index.html:215
+msgid "Le Corbusier"
+msgstr "لو کوربوزیه"
+
+#: templates/index.html:222
+msgid "Good design is a lot like clear thinking made visual"
+msgstr "طراحی خوب بسیار شبیه تفکر واضحی است که به صورت بصری ساخته شده است"
+
+#: templates/index.html:224
+msgid "Ellen Lupton"
+msgstr "الن لوپتون"
+
+#: templates/index.html:231
+msgid "Architecture is the art of how to waste space"
+msgstr "معماری هنر چگونگی هدر دادن فضاست"
+
+#: templates/index.html:233
+msgid "Philip Johnson"
+msgstr "فیلیپ جانسون"

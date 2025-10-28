@@ -1,6 +1,6 @@
-{% load static %}
+{% load static i18n %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
     <head>
         <title>InEx design
             {% if page_title %}              
@@ -15,7 +15,17 @@
         <meta name="author" content="">
         <meta name="keywords" content="">
         <meta name="description" content="">
+        {% get_current_language as LANGUAGE_CODE %}
+        {% if LANGUAGE_CODE == 'en' %}
         <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+        {% else %}
+        <!-- TODO: Not work correctly on navbar -->
+        <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css" integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous"> -->
+        {% endif %}
+
+
+
         <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -120,6 +130,23 @@
     <footer id="footer" class="overflow-hidden padding-large">
         {% include "_footer.html" %}
     </footer>
+    
+    <script>
+      function setLanguage(lang) {
+            const htmlElement = document.documentElement;
+            if (lang === 'fa') {
+                htmlElement.setAttribute('lang', 'fa');
+                htmlElement.setAttribute('dir', 'rtl');
+            } else {
+                htmlElement.setAttribute('lang', 'en');
+                htmlElement.setAttribute('dir', 'ltr');
+            }
+        }
+
+        // Call the function with the desired language
+        const userLang = '{{ request.LANGUAGE_CODE }}'; // Assuming you have set LANGUAGE_CODE in your Django settings
+        // setLanguage(userLang);
+    </script>
     {% block script %}
       
     {% endblock script %}

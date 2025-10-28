@@ -5,22 +5,32 @@
 {% block title %}{{ page_title}}{% endblock title %}
 
 {% block content %}
+<section id="featured-projects" class="product-store position-relative padding-large">
+    <div class="container">
+        <div class="row">
 
-{{ project.name }}
-<div class="swiper-slide">
-    <div class="product-card image-zoom-effect link-effect d-flex flex-wrap">
-    <div class="image-holder">
-        <img src="{{ project.cover_image.url }}" alt="product-item" class="product-image img-fluid">
-    </div>
-    <div class="cart-concern">
-        <h3 class="card-title text-uppercase pt-3 text-primary">
-        <a href="single-product.html" class="text-primary">{{ project.name }}</a>
-        </h3>
-        <div class="cart-info">
-        <a class="pseudo-text-effect" href="#" data-after="DETAILS"><span>{{ project.category }}</span></a>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="product-card image-zoom-effect link-effect d-flex flex-wrap">
+                            <div class="image-holder">
+                                <img src="{{ project.cover_image.url }}" alt="product-item"
+                                    class="product-image img-fluid">
+                            </div>
+                            <div class="cart-concern">
+                                <h3 class="card-title text-uppercase pt-3 text-primary">
+                                    <a href="single-product.html" class="text-primary">{{ project.name }}</a>
+                                </h3>
+                                <div class="cart-info">
+                                    <a class="pseudo-text-effect" href="#" data-after="DETAILS"><span>{{ project.category }}</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    </div>
-</div>
-  
+</section>
+
 {% endblock %}

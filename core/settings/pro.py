@@ -2,7 +2,7 @@ from .base import *
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['inex-design.com']
+ALLOWED_HOSTS = ['inex-design.com', 'www.inex-design.com']
 
 
 DATABASES = {
@@ -17,3 +17,8 @@ DATABASES = {
         'PORT': DB_PORT,
     }
 }
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://inex-design.com',
+    'https:/www.inex-design.com',
+]

@@ -11,6 +11,7 @@ def HomeView(request):
         page_title=_("Home"),
         projects=projects,
         clients=clients,
+        projects_header_text=_("Our Featured Projects")
     )
     return render(
         request,

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-28 10:00+0330\n"
+"POT-Creation-Date: 2025-10-28 11:24+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,12 +30,20 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
+#: generals/views.py:14
+msgid "Our Featured Projects"
+msgstr ""
+
 #: projects/views.py:16 templates/_header.html:46
 msgid "Projects"
 msgstr ""
 
 #: projects/views.py:31
 msgid "Project"
+msgstr ""
+
+#: search/views.py:26
+msgid "Search results"
 msgstr ""
 
 #: templates/_footer.html:70
@@ -94,40 +102,36 @@ msgid ""
 "every client."
 msgstr ""
 
-#: templates/index.html:152 templates/projects/projects_list.html:13
-msgid "Our Featured Projects"
-msgstr ""
-
-#: templates/index.html:154 templates/projects/projects_list.html:15
-msgid "See All"
-msgstr ""
-
-#: templates/index.html:177
-msgid "DETAILS"
-msgstr ""
-
-#: templates/index.html:213
+#: templates/index.html:169
 msgid ""
 "Architecture is the learned game, correct and magnificent, of forms "
 "assembled in the light."
 msgstr ""
 
-#: templates/index.html:215
+#: templates/index.html:171
 msgid "Le Corbusier"
 msgstr ""
 
-#: templates/index.html:222
+#: templates/index.html:178
 msgid "Good design is a lot like clear thinking made visual"
 msgstr ""
 
-#: templates/index.html:224
+#: templates/index.html:180
 msgid "Ellen Lupton"
 msgstr ""
 
-#: templates/index.html:231
+#: templates/index.html:187
 msgid "Architecture is the art of how to waste space"
 msgstr ""
 
-#: templates/index.html:233
+#: templates/index.html:189
 msgid "Philip Johnson"
+msgstr ""
+
+#: templates/projects/_projects_block.html:9
+msgid "See All"
+msgstr ""
+
+#: templates/projects/_projects_block.html:20
+msgid "Search query"
 msgstr ""

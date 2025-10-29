@@ -20,5 +20,4 @@ DATABASES = {
 
 CSRF_TRUSTED_ORIGINS = [
     'https://inex-design.com',
-    'https:/www.inex-design.com',
 ]

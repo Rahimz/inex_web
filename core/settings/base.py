@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     
     # 3rd Party
     'rosetta',
+    'parler',
 
     'accounts.apps.AccountsConfig',
     'projects.apps.ProjectsConfig',
@@ -125,6 +126,18 @@ LANGUAGES = [
 LOCALE_PATHS = [
     BASE_DIR / 'locale',
 ]
+
+# django-parler settings
+PARLER_LANGUAGES = {
+    None: (
+        {'code': 'en'},
+        {'code': 'fa'},
+    ),
+    'default': {
+        'fallback': 'en',
+        'hide_untranslated': False,
+    }
+}
 
 TIME_ZONE = 'UTC'
 

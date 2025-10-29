@@ -47,7 +47,7 @@
                             {% for project in projects_context %}
                             <li>
                                 <a href="{% url 'projects:project_details' project.slug %}"
-                                    class="dropdown-item item-anchor">{{ project.name }}</a>
+                                    class="dropdown-item item-anchor">{{ project.translations__name }}</a>
                             </li>
                             {% endfor %}
 

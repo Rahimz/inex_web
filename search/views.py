@@ -10,17 +10,19 @@ def SearchView(request):
     
     if not query:
         return redirect(request.META.get('HTTP_REFERER', '/'))
-    
+    language = request.LANGUAGE_CODE
     projects = Project.objects.filter(
-        Q(name__icontains=query) |         
-        Q(name__icontains=normal_query) |         
-        Q(category__name__icontains=query) |  # Assuming category has a 'name' field
-        Q(category__name__icontains=normal_query) |  # Assuming category has a 'name' field
-        Q(place__icontains=query) | 
-        Q(place__icontains=normal_query) | 
-        Q(details__icontains=query) |
-        Q(details__icontains=normal_query)
-    )
+        translations__language_code=language
+        ).filter(
+        Q(translations__name__icontains=query) |         
+        Q(translations__name__icontains=normal_query) |         
+        Q(category__translations__name__icontains=query) |  # Assuming category has a 'name' field
+        Q(category__translations__name__icontains=normal_query) |  # Assuming category has a 'name' field
+        Q(translations__place__icontains=query) | 
+        Q(translations__place__icontains=normal_query) | 
+        Q(translations__details__icontains=query) |
+        Q(translations__details__icontains=normal_query)
+    ).distinct()
     
     context = dict(
         page_title = _("Search results"),

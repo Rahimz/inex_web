@@ -1,22 +1,35 @@
 from django.contrib import admin
+from parler.admin import TranslatableAdmin
 
 from .models import Project, Category, Client, Image
 
 
 @admin.register(Project)
-class ProjectAdmin(admin.ModelAdmin):
+class ProjectAdmin(TranslatableAdmin):
     list_display = ['name', 'category', 'client', ]
-    prepopulated_fields = {'slug': ('name',)}
+    
+    # NOTE: I do not want to translate slug automatically
+    # def get_prepopulated_fields(self, request, obj=None):
+    #     # can't use `prepopulated_fields = ..` because it breaks the admin validation
+    #     # for translated fields. This is the official django-parler workaround.
+    #     return { 'slug': ('name',) }
+    # prepopulated_fields = {'slug': ('name',)}
 
 @admin.register(Category)
-class CategoryAdmin(admin.ModelAdmin):
+class CategoryAdmin(TranslatableAdmin):
     list_display = ['name']
-    prepopulated_fields = {'slug': ('name',)}
+    
+    # def get_prepopulated_fields(self, request, obj=None):
+    #     return { 'slug': ('name',) }
+    # prepopulated_fields = {'slug': ('name',)}
 
 @admin.register(Client)
-class ClientAdmin(admin.ModelAdmin):
+class ClientAdmin(TranslatableAdmin):
     list_display = ['name']
-    prepopulated_fields = {'slug': ('name',)}
+    
+    # def get_prepopulated_fields(self, request, obj=None):
+    #     return { 'slug': ('name',) }
+    # prepopulated_fields = {'slug': ('name',)}
 
 @admin.register(Image)
 class ImageAdmin(admin.ModelAdmin):

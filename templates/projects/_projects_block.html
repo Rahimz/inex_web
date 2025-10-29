@@ -37,7 +37,7 @@
                     <a href="{% url 'projects:project_details' project.slug %}" class="text-primary">{{ project.name }}</a>
                   </h3>
                   <div class="cart-info">
-                    <a class="pseudo-text-effect" href="{% url 'projects:project_details' project.slug %}" data-after="DETAILS"><span>{{ project.category }}</span></a>
+                    <a class="pseudo-text-effect" href="{% url 'projects:project_details' project.slug %}" data-after="{% trans 'DETAILS' %}"><span>{{ project.category.name }}</span></a>
                   </div>
                 </div>
               </div>

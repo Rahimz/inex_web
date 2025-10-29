@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-28 11:24+0330\n"
-"PO-Revision-Date: 2025-10-28 07:54+0000\n"
+"POT-Creation-Date: 2025-10-29 09:15+0330\n"
+"PO-Revision-Date: 2025-10-29 05:45+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -19,11 +19,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.10.2\n"
 
-#: core/settings/base.py:121
+#: core/settings/base.py:122
 msgid "Farsi"
 msgstr "فارسی"
 
-#: core/settings/base.py:122
+#: core/settings/base.py:123
 msgid "English"
 msgstr ""
 
@@ -43,9 +43,13 @@ msgstr "پروژه‌ها"
 msgid "Project"
 msgstr "پروژه"
 
-#: search/views.py:26
+#: search/views.py:28
 msgid "Search results"
 msgstr "نتایج جستجو"
+
+#: templates/_base.html:117
+msgid "Search"
+msgstr "جستجو"
 
 #: templates/_footer.html:70
 msgid "Contact Us"
@@ -76,6 +80,11 @@ msgstr ""
 #: templates/index.html:23 templates/index.html:44
 msgid "See projects"
 msgstr "دیدن پروژه‌ها"
+
+#: templates/index.html:41
+#| msgid "Interior design"
+msgid "Exterior design"
+msgstr "طراحی بیرونی"
 
 #: templates/index.html:42
 msgid ""
@@ -155,5 +164,6 @@ msgstr "دیدن همه"
 msgid "Search query"
 msgstr "عبارت جستجو"
 
-#~ msgid "DETAILS"
-#~ msgstr "جزییات"
+#: templates/projects/_projects_block.html:40
+msgid "DETAILS"
+msgstr "جزییات"

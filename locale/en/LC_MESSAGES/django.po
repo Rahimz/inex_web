@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-28 11:24+0330\n"
+"POT-Creation-Date: 2025-10-29 09:15+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: core/settings/base.py:121
+#: core/settings/base.py:122
 msgid "Farsi"
 msgstr ""
 
-#: core/settings/base.py:122
+#: core/settings/base.py:123
 msgid "English"
 msgstr ""
 
@@ -42,8 +42,12 @@ msgstr ""
 msgid "Project"
 msgstr ""
 
-#: search/views.py:26
+#: search/views.py:28
 msgid "Search results"
+msgstr ""
+
+#: templates/_base.html:117
+msgid "Search"
 msgstr ""
 
 #: templates/_footer.html:70
@@ -69,6 +73,10 @@ msgstr ""
 
 #: templates/index.html:23 templates/index.html:44
 msgid "See projects"
+msgstr ""
+
+#: templates/index.html:41
+msgid "Exterior design"
 msgstr ""
 
 #: templates/index.html:42
@@ -134,4 +142,8 @@ msgstr ""
 
 #: templates/projects/_projects_block.html:20
 msgid "Search query"
+msgstr ""
+
+#: templates/projects/_projects_block.html:40
+msgid "DETAILS"
 msgstr ""

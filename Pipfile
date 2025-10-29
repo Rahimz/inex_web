@@ -12,9 +12,9 @@ gunicorn = "*"
 uvicorn = "*"
 django-taggit = "*"
 django-cleanup = "*"
+django-parler = "*"
 
 [dev-packages]
 
 [requires]
 python_version = "3.12"
-

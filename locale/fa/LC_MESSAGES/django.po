@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-29 09:15+0330\n"
-"PO-Revision-Date: 2025-10-29 05:45+0000\n"
+"POT-Creation-Date: 2025-11-03 11:21+0330\n"
+"PO-Revision-Date: 2025-11-03 07:54+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -51,11 +51,21 @@ msgstr "نتایج جستجو"
 msgid "Search"
 msgstr "جستجو"
 
-#: templates/_footer.html:70
+#: templates/_footer.html:11
+msgid ""
+"Mahmoud Rahmatollahi studied Industrial design and has more than 20 years of"
+" experience in interior and extrior design. He is expert in Stores and "
+"comercial spaces and has lot of experience in Exhibition stand design."
+msgstr ""
+"محمود رحمت‌الهی در رشته طراحی صنعتی تحصیل کرده و بیش از ۲۰ سال تجربه در "
+"طراحی و اجرای فضاهای داخلی و بیرونی دارد. تخصص وی در فضاهای فروشگاهی و تجاری"
+" است و تجربه زیادی هم در طراحی و اجرای غرفه‌های نمایشگاهی دارد."
+
+#: templates/_footer.html:73
 msgid "Contact Us"
 msgstr "تماس با ما"
 
-#: templates/_footer.html:73
+#: templates/_footer.html:76
 msgid "Tehran, Iran"
 msgstr "تهران، ایران"
 
@@ -82,7 +92,6 @@ msgid "See projects"
 msgstr "دیدن پروژه‌ها"
 
 #: templates/index.html:41
-#| msgid "Interior design"
 msgid "Exterior design"
 msgstr "طراحی بیرونی"
 
@@ -157,13 +166,16 @@ msgid "Philip Johnson"
 msgstr "فیلیپ جانسون"
 
 #: templates/projects/_projects_block.html:9
+#: templates/projects/_projects_block_simple.html:9
 msgid "See All"
 msgstr "دیدن همه"
 
 #: templates/projects/_projects_block.html:20
+#: templates/projects/_projects_block_simple.html:20
 msgid "Search query"
 msgstr "عبارت جستجو"
 
 #: templates/projects/_projects_block.html:40
+#: templates/projects/_projects_block_simple.html:40
 msgid "DETAILS"
 msgstr "جزییات"

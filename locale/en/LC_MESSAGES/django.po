@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-29 09:15+0330\n"
+"POT-Creation-Date: 2025-11-03 11:21+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -50,11 +50,18 @@ msgstr ""
 msgid "Search"
 msgstr ""
 
-#: templates/_footer.html:70
-msgid "Contact Us"
+#: templates/_footer.html:11
+msgid ""
+"Mahmoud Rahmatollahi studied Industrial design and has more than 20 years of "
+"experience in interior and extrior design. He is expert in Stores and "
+"comercial spaces and has lot of experience in Exhibition stand design."
 msgstr ""
 
 #: templates/_footer.html:73
+msgid "Contact Us"
+msgstr ""
+
+#: templates/_footer.html:76
 msgid "Tehran, Iran"
 msgstr ""
 
@@ -137,13 +144,16 @@ msgid "Philip Johnson"
 msgstr ""
 
 #: templates/projects/_projects_block.html:9
+#: templates/projects/_projects_block_simple.html:9
 msgid "See All"
 msgstr ""
 
 #: templates/projects/_projects_block.html:20
+#: templates/projects/_projects_block_simple.html:20
 msgid "Search query"
 msgstr ""
 
 #: templates/projects/_projects_block.html:40
+#: templates/projects/_projects_block_simple.html:40
 msgid "DETAILS"
 msgstr ""

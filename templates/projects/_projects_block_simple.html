@@ -1,0 +1,50 @@
+{% load static i18n %}
+
+<section id="featured-projects" class="product-store position-relative padding-large">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="display-header pb-3 d-flex justify-content-between flex-wrap col-md-12">
+                <h2 class="display-2 text-dark text-uppercase">{{ header_text }}</h2> 
+                <a href="{% url 'projects:projects_list' %}" class="btn btn-medium btn-arrow btn-normal position-relative">
+                    <span class="text-uppercase">{% trans "See All" %}</span>            
+                    <svg class="arrow-right position-absolute" width="18" height="20">
+                        <use xlink:href="#arrow-right"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div id="featured-swiper" class="product-swiper col-md-12">
+            {% if query %}
+                <div>
+                    {% trans "Search query" %}: <span class="fw-bold">{{ query }}</span>
+                    <a href="{% url 'generals:home' %}" class="text-danger ms-3"> X</a>
+                    <hr>
+                    <br>
+                </div>
+            {% endif %}
+            </div>
+            <div class="">
+                <div class="row">
+                    {% for project in projects %}
+                    <div class="col-md-4">
+                        <div class="product-card image-zoom-effect link-effect d-flex flex-wrap">
+                            <div class="image-holder">
+                            <img src="{{ project.cover_image.url }}" alt="product-item" class="product-image img-fluid">
+                            </div>
+                            <div class="cart-concern">
+                                <h3 class="card-title text-uppercase pt-3 text-primary">
+                                    <a href="{% url 'projects:project_details' project.slug %}" class="text-primary">{{ project.name }}</a>
+                                </h3>
+                                <div class="cart-info">
+                                    <a class="pseudo-text-effect" href="{% url 'projects:project_details' project.slug %}" data-after="{% trans 'DETAILS' %}"><span>{{ project.category.name }}</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>      
+</section>

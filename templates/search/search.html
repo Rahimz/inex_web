@@ -5,5 +5,7 @@
 {% block title %}{{ page_title }}{% endblock title %}
 
 {% block content %}
-{% include "projects/_projects_block.html" with header_text=page_title %}
+
+{% include "projects/_projects_block_simple.html" with header_text=page_title %}
+
 {% endblock content %}

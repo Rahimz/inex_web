@@ -1,77 +1,80 @@
 {% load static i18n %}
-<div class="container-fluid">
-  <div class="row">
-    <div class="row d-flex flex-wrap justify-content-between">
-      <div class="col-lg-3 col-sm-6 pb-3 pe-4">
-        <div class="footer-menu">
-          <img src="{% static 'images/main-logo-2.png' %}" alt="logo" class="pb-3" height="80px" width="auto">
-          <p></p>
-        </div>
-        <div class="copyright">
-          <p>All right reserved to inex-design.com 
-            <br>(© Copyright 2025). Design by <a href="https://rahimagha.ir">rahim</a>
-          </p>
-        </div>
-      </div>
-      
-      {% comment %}
-      <div class="col-lg-2 col-sm-6 pb-3">
-        <div class="footer-menu text-uppercase">
-          <h5 class="widget-title pb-2">Quick Links</h5>
-          <ul class="menu-list list-unstyled text-uppercase">
-            <li class="menu-item pb-2">
-              <a href="#billboard">Home</a>
-            </li>
-            <li class="menu-item pb-2">
-              <a href="#about-us">About</a>
-            </li>
-            <li class="menu-item pb-2">
-              <a href="#company-services">Services</a>
-            </li>
-            <li class="menu-item pb-2">
-              <a href="#latest-blog">Blogs</a>
-            </li>
-            <li class="menu-item pb-2">
-              <a href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-lg-2 col-sm-6 pb-3">
-        <div class="footer-menu text-uppercase">
-          <h5 class="widget-title pb-2">Social</h5>
-          <div class="social-links">
-            <ul class="list-unstyled">
-              <li class="pb-2">
-                <a href="#">Facebook</a>
-              </li>
-              <li class="pb-2">
-                <a href="#">Twitter</a>
-              </li>
-              <li class="pb-2">
-                <a href="#">Pinterest</a>
-              </li>
-              <li class="pb-2">
-                <a href="#">Instagram</a>
-              </li>
-              <li>
-                <a href="#">Youtube</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      {% endcomment %}
+<div class="container-fluid" >
+    <div class="row">
+        <div class="row d-flex flex-wrap justify-content-between">
+            <div class="col-lg-3 col-sm-6 pb-3 pe-4">
+                <div class="footer-menu">
+                    <img src="{% static 'images/main-logo-2.png' %}" alt="logo" class="pb-3" height="80px" width="auto">
+                    <p></p>
+                </div>
+                <div>
+                    <p>{% trans "Mahmoud Rahmatollahi studied Industrial design and has more than 20 years of experience in interior and extrior design. He is expert in Stores and comercial spaces and has lot of experience in Exhibition stand design." %}</p>
+                </div>
+                <div class="copyright">
+                    <p>All right reserved to inex-design.com
+                        <br>(© Copyright 2025). Design by <a href="https://rahimagha.ir">rahim</a>
+                    </p>
+                </div>
+            </div>
+
+            {% comment %}
+            <div class="col-lg-2 col-sm-6 pb-3">
+                <div class="footer-menu text-uppercase">
+                    <h5 class="widget-title pb-2">Quick Links</h5>
+                    <ul class="menu-list list-unstyled text-uppercase">
+                        <li class="menu-item pb-2">
+                            <a href="#billboard">Home</a>
+                        </li>
+                        <li class="menu-item pb-2">
+                            <a href="#about-us">About</a>
+                        </li>
+                        <li class="menu-item pb-2">
+                            <a href="#company-services">Services</a>
+                        </li>
+                        <li class="menu-item pb-2">
+                            <a href="#latest-blog">Blogs</a>
+                        </li>
+                        <li class="menu-item pb-2">
+                            <a href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-2 col-sm-6 pb-3">
+                <div class="footer-menu text-uppercase">
+                    <h5 class="widget-title pb-2">Social</h5>
+                    <div class="social-links">
+                        <ul class="list-unstyled">
+                            <li class="pb-2">
+                                <a href="#">Facebook</a>
+                            </li>
+                            <li class="pb-2">
+                                <a href="#">Twitter</a>
+                            </li>
+                            <li class="pb-2">
+                                <a href="#">Pinterest</a>
+                            </li>
+                            <li class="pb-2">
+                                <a href="#">Instagram</a>
+                            </li>
+                            <li>
+                                <a href="#">Youtube</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            {% endcomment %}
 
 
-      <div class="col-lg-3 col-sm-6">
-        <div class="footer-menu contact-item">
-          <h5 class="widget-title text-uppercase pb-2">{% trans "Contact Us" %}</h5>
-          <p><a href="tel:+989123382562">+ 98 912 338 25 62</a></p>
-          <p><a href="mailto:">mahmoud.rahmatollahi@gmail.com</a></p>
-          <p>{% trans "Tehran, Iran" %}</p>
+            <div class="col-lg-3 col-sm-6">
+                <div class="footer-menu contact-item">
+                    <h5 class="widget-title text-uppercase pb-2">{% trans "Contact Us" %}</h5>
+                    <p><a href="tel:+989123382562">+ 98 912 338 25 62</a></p>
+                    <p><a href="mailto:">mahmoud.rahmatollahi@gmail.com</a></p>
+                    <p>{% trans "Tehran, Iran" %}</p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>

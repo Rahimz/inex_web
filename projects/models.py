@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils.text import slugify
 from parler.models import TranslatableModel, TranslatedFields
+from django.utils.translation import gettext_lazy as _
 
 # docs at https://django-parler.readthedocs.io/en/latest/compatibility.html
 # ordering with translated fields
@@ -59,6 +60,17 @@ class Project(TranslatableModel):
         details = models.TextField(
             blank=True
         ),
+        location = models.CharField(
+            max_length=250,
+            blank=True,
+            null=True,
+            verbose_name=_("Location")
+        ),
+        completed_date = models.CharField(
+            _("Completed date"),
+            null=True,
+            blank=True
+        )
     )
     slug = models.SlugField(
         allow_unicode=True
@@ -73,6 +85,13 @@ class Project(TranslatableModel):
         related_name='projects',
         on_delete=models.PROTECT
     )
+    area = models.CharField(
+        blank=True,
+        null=True,
+        verbose_name=_("Area")
+    )
+    
+    
     
     cover_image = models.ImageField(
         upload_to='products/'        

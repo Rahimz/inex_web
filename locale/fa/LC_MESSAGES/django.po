@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-03 11:21+0330\n"
-"PO-Revision-Date: 2025-11-03 07:54+0000\n"
+"POT-Creation-Date: 2025-11-23 13:32+0330\n"
+"PO-Revision-Date: 2025-11-23 10:02+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -35,11 +35,23 @@ msgstr "خانه"
 msgid "Our Featured Projects"
 msgstr "پروژه‌های منتخب ما"
 
+#: projects/models.py:67 templates/projects/project_details_new.html:55
+msgid "Location"
+msgstr "موقعیت"
+
+#: projects/models.py:70 templates/projects/project_details_new.html:63
+msgid "Completed date"
+msgstr "تاریخ انجام"
+
+#: projects/models.py:91 templates/projects/project_details_new.html:59
+msgid "Area"
+msgstr "مساحت"
+
 #: projects/views.py:16 templates/_header.html:46
 msgid "Projects"
 msgstr "پروژه‌ها"
 
-#: projects/views.py:31
+#: projects/views.py:32
 msgid "Project"
 msgstr "پروژه"
 
@@ -178,4 +190,12 @@ msgstr "عبارت جستجو"
 #: templates/projects/_projects_block.html:40
 #: templates/projects/_projects_block_simple.html:40
 msgid "DETAILS"
+msgstr "جزییات"
+
+#: templates/projects/project_details_new.html:51
+msgid "Client"
+msgstr "کارفرما"
+
+#: templates/projects/project_details_new.html:67
+msgid "Details"
 msgstr "جزییات"

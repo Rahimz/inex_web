@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-03 11:21+0330\n"
+"POT-Creation-Date: 2025-11-23 13:32+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,11 +34,23 @@ msgstr ""
 msgid "Our Featured Projects"
 msgstr ""
 
+#: projects/models.py:67 templates/projects/project_details_new.html:55
+msgid "Location"
+msgstr ""
+
+#: projects/models.py:70 templates/projects/project_details_new.html:63
+msgid "Completed date"
+msgstr ""
+
+#: projects/models.py:91 templates/projects/project_details_new.html:59
+msgid "Area"
+msgstr ""
+
 #: projects/views.py:16 templates/_header.html:46
 msgid "Projects"
 msgstr ""
 
-#: projects/views.py:31
+#: projects/views.py:32
 msgid "Project"
 msgstr ""
 
@@ -156,4 +168,12 @@ msgstr ""
 #: templates/projects/_projects_block.html:40
 #: templates/projects/_projects_block_simple.html:40
 msgid "DETAILS"
+msgstr ""
+
+#: templates/projects/project_details_new.html:51
+msgid "Client"
+msgstr ""
+
+#: templates/projects/project_details_new.html:67
+msgid "Details"
 msgstr ""

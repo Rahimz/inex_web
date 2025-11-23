@@ -64,8 +64,8 @@
                             <td><b>{% if project.completed_date %}{{ project.completed_date }}{% endif %}</b></td>
                         </tr>
                         <tr>
-                            <td>{% trans "Description" %}</td>
-                            <td><b>{% if project.description %}{{ project.description }}{% endif %}</b></td>
+                            <td>{% trans "Details" %}</td>
+                            <td><b>{% if project.details %}{{ project.details | linebreaksbr }}{% endif %}</b></td>
                         </tr>
                     </tbody>
                 </table>

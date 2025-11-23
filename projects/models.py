@@ -77,6 +77,10 @@ class Project(TranslatableModel):
     cover_image = models.ImageField(
         upload_to='products/'        
     )
+    
+    def __str__(self):
+        return self.name
+    
 
 
 class Image(models.Model):

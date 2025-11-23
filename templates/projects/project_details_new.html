@@ -1,0 +1,111 @@
+{% extends "_base.html" %}
+
+{% load static i18n %}
+
+{% block head %}
+  <style>
+    .thumbnail {
+        transition: border 0.3s ease;
+    }
+
+    .thumbnail.selected {
+        border: 2px solid orange; /* Change this to your desired selected border color */
+    }
+
+    #main_image {
+        transition: opacity 0.5s ease;
+    }
+</style>
+{% endblock head %}
+
+{% block title %}{{ page_title}}{% endblock title %}
+
+{% block content %}
+<section id="featured-projects" class="product-store position-relative padding-large">
+    <div class="container">
+        <div class="row">
+            <h3 class="card-title text-uppercase pt-3 text-primary">
+                <a href="#" class="text-primary">{{ project.name }}</a>
+            </h3>
+            <div class="cart-info">
+                <a class="" href="#" data-after="DETAILS"><span>{{ project.category }}</span></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <img id="main_image" src="{{ project.cover_image.url }}" alt="product-item" class="product-image img-fluid rounded">
+                <div>
+                    <div class="my-2">
+                    <img id="main_image_thumb" src="{{ project.cover_image.url }}" alt="" width="80px" height="auto" class="rounded thumbnail">
+                    {% for image in project.images.all %}
+                        <img id="thumb_{{ image.id }}" src="{{ image.file.url }}" alt="" width="80px" height="auto" class="rounded thumbnail">
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+                        
+            <div class="col-md-6">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td>{% trans "Client" %}</td>
+                            <td><b>{% if project.client %}{{ project.client }}{% endif %}</b></td>
+                        </tr>
+                        <tr>
+                            <td>{% trans "Location" %}</td>
+                            <td><b>{% if project.location %}{{ project.location }}{% endif %}</b></td>
+                        </tr>
+                        <tr>
+                            <td>{% trans "Area" %}</td>
+                            <td><b>{% if project.area %}{{ project.area }}{% endif %}</b></td>
+                        </tr>
+                        <tr>
+                            <td>{% trans "Completed date" %}</td>
+                            <td><b>{% if project.completed_date %}{{ project.completed_date }}{% endif %}</b></td>
+                        </tr>
+                        <tr>
+                            <td>{% trans "Description" %}</td>
+                            <td><b>{% if project.description %}{{ project.description }}{% endif %}</b></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block script %}
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const thumbnails = document.querySelectorAll('.thumbnail');
+    const mainImage = document.getElementById('main_image');
+
+    // Initial selection on page load
+    thumbnails[0].classList.add('selected');
+
+    thumbnails.forEach(thumb => {
+        thumb.addEventListener('click', function() {
+            // Get the source of the clicked thumbnail
+            const newSrc = this.src;
+
+            // Fade out the main image
+            mainImage.style.opacity = '0';
+
+            // Change the source after a short delay to allow fade-out
+            setTimeout(() => {
+                mainImage.src = newSrc;
+
+                // Fade in the new image
+                mainImage.style.opacity = '1';
+            }, 300); // Match the timeout with the CSS transition duration
+
+            // Remove selected class from all thumbnails and add to clicked one
+            thumbnails.forEach(t => t.classList.remove('selected'));
+            this.classList.add('selected');
+        });
+    });
+});
+</script>
+{% endblock script %}

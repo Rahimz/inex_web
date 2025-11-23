@@ -24,7 +24,8 @@ class ProjectDetailsView(DetailView):
     slug_field = 'slug' 
     slug_url_kwarg = 'slug' 
     
-    template_name = 'projects/project_details.html'
+    # template_name = 'projects/project_details.html'
+    template_name = 'projects/project_details_new.html'
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

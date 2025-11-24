@@ -10,13 +10,13 @@
       stickTo: $('.feat-product-grid')
     });
 
-    $(".user-items .search-item").click(function () {
-      $(".search-box").toggleClass('active');
-      $(".search-box .search-input").focus();
-    });
-    $(".close-button").click(function () {
-      $(".search-box").toggleClass('active');
-    });
+    // $(".user-items .search-item").click(function () {
+    //   $(".search-box").toggleClass('active');
+    //   $(".search-box .search-input").focus();
+    // });
+    // $(".close-button").click(function () {
+    //   $(".search-box").toggleClass('active');
+    // });
 
     var swiper = new Swiper(".main-swiper", {
       speed: 500,

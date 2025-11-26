@@ -10,14 +10,17 @@
       stickTo: $('.feat-product-grid')
     });
 
-    // $(".user-items .search-item").click(function () {
-    //   $(".search-box").toggleClass('active');
-    //   $(".search-box .search-input").focus();
-    // });
-    // $(".close-button").click(function () {
-    //   $(".search-box").toggleClass('active');
-    // });
+  // Search box toggle behavior
+    $(".search-item").click(function (event) {
+        event.stopPropagation(); // Stop the click event from bubbling
+        $("#search-box").collapse('toggle'); // Toggle the collapse
+        $(".search-input").focus(); // Focus on the input
+    });
 
+    $(".close-button").click(function (event) {
+        event.stopPropagation(); // Stop the click event from bubbling
+        $("#search-box").collapse('hide'); // Hide the collapse explicitly
+    });
     var swiper = new Swiper(".main-swiper", {
       speed: 500,
       loop: true,

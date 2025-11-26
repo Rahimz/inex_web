@@ -24,27 +24,25 @@
                 </div>
             {% endif %}
             </div>
-            <div class="">
-                <div class="row">
-                    {% for project in projects %}
-                    <div class="col-md-4">
-                        <div class="product-card link-effect d-flex flex-wrap">
-                            <div class="image-holder">
-                                <img src="{{ project.cover_image.url }}" alt="product-item" class="product-image img-fluid  rounded">
-                            </div>
-                            <div class="cart-concern">
-                                <h3 class="card-title text-uppercase pt-3 text-primary">
-                                    <a href="{% url 'projects:project_details' project.slug %}" class="text-primary">{{ project.name }}</a>
-                                </h3>
-                                <div class="cart-info">
-                                    <a class="pseudo-text-effect" href="{% url 'projects:project_details' project.slug %}" data-after="{% trans 'DETAILS' %}"><span>{{ project.category.name }}</span></a>
-                                </div>
+        </div>
+        <div class="row">
+            {% for project in projects %}
+            <div class="col-md-4">
+                <div class="product-card link-effect d-flex flex-wrap">
+                    <div class="image-holder">
+                        <img src="{{ project.cover_image.url }}" alt="{{ project.name }}" class="product-image rounded">
+                        <div class="cart-concern">
+                            <h3 class="card-title text-uppercase pt-3 text-primary">
+                                <a href="{% url 'projects:project_details' project.slug %}" class="text-primary">{{ project.name }}</a>
+                            </h3>
+                            <div class="cart-info">
+                                <a class="pseudo-text-effect" href="{% url 'projects:project_details' project.slug %}" data-after="{% trans 'DETAILS' %}"><span>{{ project.category.name }}</span></a>
                             </div>
                         </div>
                     </div>
-                    {% endfor %}
                 </div>
             </div>
+            {% endfor %}
         </div>
     </div>      
 </section>

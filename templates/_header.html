@@ -44,10 +44,10 @@
                         <a class="nav-link dropdown-toggle" href="#" id="dropdownPages" data-bs-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">{% translate "Projects" %}</a>
                         <ul class="dropdown-menu list-unstyled" aria-labelledby="dropdownPages">
-                            {% for project in projects_context %}
+                            {% for category in categories_context %}
                             <li>
-                                <a href="{% url 'projects:project_details' project.slug %}"
-                                    class="dropdown-item item-anchor">{{ project.translations__name }}</a>
+                                <a href="{% url 'projects:projects_list_category' category.slug %}"
+                                    class="dropdown-item item-anchor">{{ category.translations__name }}</a>
                             </li>
                             {% endfor %}
 

@@ -14,8 +14,11 @@
                     <div class="swiper-slide">
                         <div class="product-card image-zoom-effect link-effect d-flex flex-wrap">
                             <div class="image-holder">
-                                <img src="{{ project.cover_image.url }}" alt="product-item"
-                                    class="product-image img-fluid">
+                                {% if project.thumbnail %}
+                                <img src="{{ project.thumbnail.url }}" alt="{{ project.name }}" class="product-image rounded">
+                                {% else %}
+                                <img src="{{ project.cover_image.url }}" alt="{{ project.name }}" class="product-image rounded">
+                                {% endif %}
                             </div>
                             <div class="cart-concern">
                                 <h3 class="card-title text-uppercase pt-3 text-primary">

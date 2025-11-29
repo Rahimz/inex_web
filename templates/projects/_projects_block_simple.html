@@ -30,7 +30,11 @@
             <div class="col-md-4">
                 <div class="product-card link-effect d-flex flex-wrap">
                     <div class="image-holder">
+                        {% if project.thumbnail %}
+                        <img src="{{ project.thumbnail.url }}" alt="{{ project.name }}" class="product-image rounded">
+                        {% else %}
                         <img src="{{ project.cover_image.url }}" alt="{{ project.name }}" class="product-image rounded">
+                        {% endif %}
                         <div class="cart-concern">
                             <h3 class="card-title text-uppercase pt-3 text-primary">
                                 <a href="{% url 'projects:project_details' project.slug %}" class="text-primary">{{ project.name }}</a>

@@ -33,12 +33,26 @@
         </div>
         <div class="row">
             <div class="col-md-6">
-                <img id="main_image" src="{{ project.cover_image.url }}" alt="product-item" class="product-image img-fluid rounded">
+                    {% if project.thumbnail %}
+                    <img id="main_image" src="{{ project.thumbnail.url }}" alt="{{ project.name }}" class="product-image rounded">
+                    {% else %}
+                    <img src="{{ project.cover_image.url }}" alt="{{ project.name }}" class="product-image rounded">
+                    {% endif %}
                 <div>
                     <div class="my-2">
-                    <img id="main_image_thumb" src="{{ project.cover_image.url }}" alt="" width="80px" height="auto" class="rounded thumbnail">
-                    {% for image in project.images.all %}
+                    
+                        {% if project.thumbnail %}
+                        <img id="main_image_thumb" src="{{ project.thumbnail.url }}" alt="" width="80px" height="auto" class="rounded thumbnail">
+                        {% else %}
+                        <img id="main_image_thumb" src="{{ project.cover_image.url }}" alt="" width="80px" height="auto" class="rounded thumbnail">
+                        {% endif %}
+
+                        {% for image in project.images.all %}
+                        {% if image.thumbnail %}
+                        <img id="thumb_{{ image.id }}" src="{{ image.thumbnail.url }}" alt="" width="80px" height="auto" class="rounded thumbnail">
+                        {% else %}
                         <img id="thumb_{{ image.id }}" src="{{ image.file.url }}" alt="" width="80px" height="auto" class="rounded thumbnail">
+                        {% endif %}
                         {% endfor %}
                     </div>
                 </div>

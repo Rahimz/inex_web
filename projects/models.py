@@ -1,7 +1,8 @@
 from django.db import models
-from django.utils.text import slugify
+# from django.utils.text import slugify
 from parler.models import TranslatableModel, TranslatedFields
 from django.utils.translation import gettext_lazy as _
+from tools.utils.make_thumbnail import make_thumbnail
 
 # docs at https://django-parler.readthedocs.io/en/latest/compatibility.html
 # ordering with translated fields
@@ -96,10 +97,24 @@ class Project(TranslatableModel):
     cover_image = models.ImageField(
         upload_to='products/'        
     )
+    thumbnail = models.ImageField(
+        upload_to='products/thumbnails/',
+        null=True,
+        blank=True
+    )
     
     def __str__(self):
         return self.name
     
+    def save(self, *args, **kwargs):
+        # make thumbnail from file
+        try:
+            if self.cover_image and not self.thumbnail:
+                self.thumbnail = make_thumbnail(self.cover_image.file, size=(500,500))
+        except Exception as e:
+            print(f"Error generating thumbnail: {e}")
+            
+        return super().save(*args, **kwargs)
 
 
 class Image(models.Model):
@@ -111,7 +126,23 @@ class Image(models.Model):
     file = models.ImageField(
         upload_to='projects/images/'
     )
+    thumbnail = models.ImageField(
+        upload_to='products/images/thumbnails/',
+        null=True,
+        blank=True
+    )
 
     def __str__(self):
         return f"image {self.id}"
+    
+    
+    def save(self, *args, **kwargs):
+        # make thumbnail from file
+        try:
+            if self.file and not self.thumbnail:
+                self.thumbnail = make_thumbnail(self.file.file, size=(500,500))
+        except Exception as e:
+            print(f"Error generating thumbnail: {e}")
+            
+        return super().save(*args, **kwargs)
     

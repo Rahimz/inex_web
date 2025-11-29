@@ -11,18 +11,20 @@ def make_thumbnail(image, size=(500, 500)):
     # im = IMG.open(image)
     try:
         with IMG.open(image) as im:
+            """
+            alpha defines opacity between 0 and 255 """
             # --- UTILITY FUNCTION ---
-            def get_adaptive_color(img, x, y, width, height):
+            def get_adaptive_color(img, x, y, width, height, alpha=64):
                 """Returns black or white depending on background brightness"""
                 # Sample a small area around the text position
                 sample_area = img.crop((x, y, x + width, y + height))
                 # Convert to grayscale and get average brightness (0-255)
                 grayscale = sample_area.convert('L')
                 avg_brightness = sum(grayscale.getdata()) / (width * height)
-                return (0, 0, 0, 64) if avg_brightness > 127 else (255, 255, 255, 64)
+                return (0, 0, 0, alpha) if avg_brightness > 127 else (255, 255, 255, alpha)
             
-            if im.mode in ('RGBA', 'P'):
-                im = im.convert('RGB') # convert mode
+            if im.mode != 'RGBA':
+                im = im.convert('RGBA')
 
             # extension = image.name.split('.')[-1]
             image_name, image_ext = os.path.splitext(os.path.basename(image.name))
@@ -34,10 +36,14 @@ def make_thumbnail(image, size=(500, 500)):
             watermark_text = "inex-design.com"
             
             # Create a drawing context
-            draw = ImageDraw.Draw(im)
+            # draw = ImageDraw.Draw(im) # this one could not add transparent layer
+            # 2. Create a new, transparent image for the watermark text
+            watermark_layer = IMG.new('RGBA', im.size, (255, 255, 255, 0)) # Fully transparent
+            draw = ImageDraw.Draw(watermark_layer)
             
             # --- CENTER WATERMARK (large, 50% opacity) ---
             # center_font_size = int(min(im.size) * 0.25)  # 15% of smaller dimension             
+            center_opacity = 180
             center_font_size = 18  # For 500x500 images
            
             
@@ -57,7 +63,7 @@ def make_thumbnail(image, size=(500, 500)):
             
             # Get center color adaptive
             # center_color =(255, 255, 255, 128) # (RGBA color with alpha=128 for 50% opacity)
-            center_color = get_adaptive_color(im, center_x, center_y, center_width, center_height)
+            center_color = get_adaptive_color(im, center_x, center_y, center_width, center_height, center_opacity)
             # Draw center watermark 
             
             draw.text((center_x, center_y), watermark_text, font=center_font, fill=center_color)
@@ -67,6 +73,7 @@ def make_thumbnail(image, size=(500, 500)):
             
             # --- CORNER WATERMARK (smaller, same as before) ---
             # corner_font_size = int(min(im.size) * 0.05)  # 5% of smaller dimension
+            corner_opacity = 128
             corner_font_size = 12
             
             try:
@@ -83,12 +90,13 @@ def make_thumbnail(image, size=(500, 500)):
             corner_y = im.size[1] - corner_height - margin
             
             # corner_color = (255, 255, 255, 128)
-            corner_color = get_adaptive_color(im, corner_x, corner_y, corner_width, corner_height)
+            corner_color = get_adaptive_color(im, corner_x, corner_y, corner_width, corner_height, corner_opacity)
             draw.text((corner_x, corner_y), watermark_text, font=corner_font, fill=corner_color)
             
-            # print('corner font size', corner_font_size)
-            # print('corner color', corner_color)
-            # Add watermark +++++
+            
+            # 3. Composite the watermark layer onto the original image
+            out = IMG.alpha_composite(im, watermark_layer)
+            
             
             thumb_io = BytesIO() # create a BytesIO object
             # we have problem with gif image so if the save method doesnot work we do not 
@@ -96,6 +104,8 @@ def make_thumbnail(image, size=(500, 500)):
              # Save the thumbnail based on format
             if image_ext.lower() in ('.jpg', '.jpeg'):
                 format = 'JPEG'
+                # jpg does not support RGBA and should be converted
+                out = out.convert('RGB')
             elif image_ext.lower() == '.png':
                 format = 'PNG'
             elif image_ext.lower() == '.webp':
@@ -106,7 +116,7 @@ def make_thumbnail(image, size=(500, 500)):
                 image_ext = '.jpg'
                     
             try:
-                im.save(thumb_io, format, quality=85) #, quality=85 save image to BytesIO object
+                out.save(thumb_io, format, quality=85) #, quality=85 save image to BytesIO object
             except Exception as e:
                 print(f"Error creating thumbnail: {e}")
                 return thumbnail

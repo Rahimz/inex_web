@@ -53,7 +53,10 @@
 
                 {% if request.user.is_superuser %}
                 <li class="nav-item">
-                    <a class="nav-link me-4" href="{% url 'rosetta-old-home-redirect' %}">Rosetta</a>
+                    <a class="nav-link me-4" href="{% url 'rosetta-old-home-redirect' %}" target="_blank">Rosetta</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-4" href="{% url 'admin:index' %}" target="_blank">Admin</a>
                 </li>
                 {% endif %}
                 {% comment %}

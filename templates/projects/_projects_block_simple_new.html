@@ -5,11 +5,13 @@
         <div class="d-flex justify-content-between">
             <div>
                 <h1 class="text-dark text-uppercase">{{ header_text }}</h1>
-                {% if category %}
+                {% if categories %}
                 <div class="my-2">
                     {% for cat in categories %}
                       <a href="{% url 'projects:projects_list_category' cat.slug %}" class="btn btn-sm {% if cat.slug == category %}btn-warning{% else %}btn-outline-warning{% endif %}">{{ cat.name }}</a>
-                    {% endfor %}
+                      {% endfor %}
+                      <a href="{% url 'projects:projects_list' %}" class="btn btn-sm {% if not category %}btn-warning{% else %}btn-outline-warning{% endif %}">{% trans "All" %}</a>
+
                 </div>
                 {% endif %}
             </div>

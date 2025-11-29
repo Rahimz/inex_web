@@ -3,11 +3,17 @@ from parler.admin import TranslatableAdmin
 
 from .models import Project, Category, Client, Image
 
+class ImageInline(admin.StackedInline):
+    model = Image
+    raw_field_id = 'project'
+    extra = 3
+
 
 @admin.register(Project)
 class ProjectAdmin(TranslatableAdmin):
     list_display = ['name', 'category', 'client', ]
     
+    inlines = [ImageInline]
     # NOTE: I do not want to translate slug automatically
     # def get_prepopulated_fields(self, request, obj=None):
     #     # can't use `prepopulated_fields = ..` because it breaks the admin validation

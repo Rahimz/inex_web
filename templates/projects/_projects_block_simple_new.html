@@ -3,7 +3,16 @@
 <section class="">
     <div class="container">
         <div class="d-flex justify-content-between">
-            <h1 class="text-dark text-uppercase">{{ header_text }}</h1> 
+            <div>
+                <h1 class="text-dark text-uppercase">{{ header_text }}</h1>
+                {% if category %}
+                <div class="my-2">
+                    {% for cat in categories %}
+                      <a href="{% url 'projects:projects_list_category' cat.slug %}" class="btn btn-sm {% if cat.slug == category %}btn-warning{% else %}btn-outline-warning{% endif %}">{{ cat.name }}</a>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
             <div class="d-flex flex-column justify-content-center">
                 <div class="text-center">
                     <a href="{% url 'projects:projects_list' %}" class="btn btn-medium btn-arrow btn-normal position-relative">

@@ -29,11 +29,11 @@
             
             <div class="swiper-slide">
               <div class="product-card link-effect d-flex flex-wrap">
-                <div class="image-holder">
+                <div class="image-container">
                   {% if project.thumbnail %}
-                  <img src="{{ project.thumbnail.url }}" alt="{{ project.name }}" class="product-image rounded">
+                  <img src="{{ project.thumbnail.url }}" alt="{{ project.name }}" class="product-image rounded" witdth="100%" height="auto" style="object-fit: cover;">
                   {% else %}
-                  <img src="{{ project.cover_image.url }}" alt="{{ project.name }}" class="product-image rounded">
+                  <img src="{{ project.cover_image.url }}" alt="{{ project.name }}" class="product-image rounded" witdth="100%" height="auto" style="object-fit: cover;">
                   {% endif %}
                 </div>
                 <div class="cart-concern">

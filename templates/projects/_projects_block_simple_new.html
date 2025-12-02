@@ -27,7 +27,7 @@
             </div>
         </div>
     </div>
-    
+    <!-- Search query -->
     <div class="container">
         <div class="row">
             <div id="" class="col-md-12">
@@ -50,9 +50,13 @@
                 <div class="">
                     <div class="d-flex flex-column ">
                         {% if project.thumbnail %}
-                        <img src="{{ project.thumbnail.url }}" alt="{{ project.name }}" class="product-image rounded">
+                        <div class="image-container">
+                            <img src="{{ project.thumbnail.url }}" alt="{{ project.name }}" class="product-image rounded">
+                        </div>
                         {% else %}
-                        <img src="{{ project.cover_image.url }}" alt="{{ project.name }}" class="product-image rounded">
+                        <div class="image-container">
+                            <img src="{{ project.cover_image.url }}" alt="{{ project.name }}" class="product-image rounded">
+                        </div>
                         {% endif %}
                         <div class="">
                             <h3 class="card-title text-uppercase pt-3 text-primary">

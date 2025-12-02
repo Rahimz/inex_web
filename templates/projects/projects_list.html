@@ -4,6 +4,27 @@
 
 {% block title %}{{ page_title}}{% endblock title %}
 
+{% block head %}
+<style>
+    .product-image {
+    width: 100%;      /* Make the image full width */
+    height: 300px;   /* Set a fixed height for the images */
+    object-fit: cover; /* Let the image cover the area while maintaining aspect ratio */
+    display: block;   /* Block display to support margin auto for centering */
+    margin: auto;     /* Center the image horizontally if any space is available */
+}
+
+.image-container {
+    display: flex;      /* Use flex to center content vertically */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally (if needed) */
+    height: 300px;     /* Ensure this matches the height used above */
+}
+</style>
+  
+{% endblock head %}
+
+
 {% block content %}
 
 {% include "projects/_projects_block_simple_new.html" with header_text=page_title %}

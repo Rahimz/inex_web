@@ -6,7 +6,7 @@ from .models import Project, Category, Client, Image
 class ImageInline(admin.StackedInline):
     model = Image
     raw_field_id = 'project'
-    extra = 3
+    extra = 7
 
 
 @admin.register(Project)

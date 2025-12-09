@@ -27,6 +27,9 @@
             <h3 class="card-title text-uppercase pt-3 text-primary">
                 <a href="#" class="text-primary">{{ project.name }}</a>
             </h3>
+            {% if request.user.is_superuser %}
+              <a href="{% url 'admin:projects_project_change' project.id  %}">edit</a>
+            {% endif %}
             <div class="cart-info">
                 <a class="" href="#" data-after="DETAILS"><span>{{ project.category }}</span></a>
             </div>

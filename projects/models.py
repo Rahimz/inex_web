@@ -107,6 +107,9 @@ class Project(TranslatableModel):
         default=1
     )
     
+    class Meta:
+        ordering = ('rank',)
+    
     def __str__(self):
         return self.name
     

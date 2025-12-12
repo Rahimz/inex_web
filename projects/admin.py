@@ -11,8 +11,9 @@ class ImageInline(admin.StackedInline):
 
 @admin.register(Project)
 class ProjectAdmin(TranslatableAdmin):
-    list_display = ['name', 'category', 'client', ]
-    
+    list_display = ['id', 'name', 'category', 'client', ]
+    list_filter = ['category']
+    list_editable = ['rank']
     inlines = [ImageInline]
     # NOTE: I do not want to translate slug automatically
     # def get_prepopulated_fields(self, request, obj=None):

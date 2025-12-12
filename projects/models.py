@@ -102,6 +102,10 @@ class Project(TranslatableModel):
         null=True,
         blank=True
     )
+    rank = models.PositiveSmallIntegerField(
+        _("Rank"),
+        default=1
+    )
     
     def __str__(self):
         return self.name

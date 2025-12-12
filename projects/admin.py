@@ -11,7 +11,7 @@ class ImageInline(admin.StackedInline):
 
 @admin.register(Project)
 class ProjectAdmin(TranslatableAdmin):
-    list_display = ['id', 'name', 'category', 'client', ]
+    list_display = ['id', 'name', 'category', 'client', 'rank']
     list_filter = ['category']
     list_editable = ['rank']
     inlines = [ImageInline]

@@ -1,26 +1,46 @@
 {% load static i18n %}
 <!DOCTYPE html>
-{% if LANGUAGE_CODE == 'fa' %}
-<html dir="rtl" lang="fa">
-{% endif %}
-{% if LANGUAGE_CODE == 'en' %}
-<html dir="" lang="en">
-{% endif %}
-
+<html lang="{% get_current_language as LANGUAGE_CODE %}" dir="{% if LANGUAGE_CODE == 'fa' %}rtl{% else %}ltr{% endif %}"></html>
 <head>
-    <title>InEx design
-        {% if page_title %}
-        | {% block title %}{% endblock title %}
-        {% endif %}
-    </title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="author" content="">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
+    
+    <title>
+        {% trans "InEx design" %}
+        {% if page_title %}
+        | {% block title %}{% endblock title %}
+        {% endif %}
+    </title>
+    <meta name="description" content="{% trans 'Professional design and renovation services for stores, offices, and exhibition stands by Mahmoud Rahmatollahi' %}.">
+    <meta name="keywords" content="{% trans 'Interior Design, Store Design, Office Renovation, Exhibition Stand Design' %}">
+    <meta name="author" content="{% trans 'Mahmoud Rahmatollahi' %}">
+
+    <!-- Open Graph Meta Tags -->
+    <!-- Open Graph Meta Tags (for social sharing) -->
+    <meta property="og:title" content="{% block og_title %}InEx Design | {% trans 'Store, Office & Exhibition Stand Design' %}{% endblock og_title %}" />
+    <meta property="og:description" content="{% block og_description %}{% trans 'Professional design and renovation services for stores, offices, and exhibition stands.' %}{% endblock og_description %}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ request.build_absolute_uri }}" />
+    <meta property="og:image" content="{% block og_image %}{{ request.scheme }}://{{ request.get_host }}{% static 'images/og-image.png' %}{% endblock og_image %}" />
+    <meta property="og:site_name" content="InEx Design" />
+    {% if LANGUAGE_CODE == 'fa' %}
+    <meta property="og:locale" content="fa_IR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    {% else %}
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="fa_IR" />
+    {% endif %}
+
+    <!-- hreflang tags -->
+    {% block hreflang_tags %}
+        {# This needs to be implemented in your views to get the URL of the other language version #}
+        {# Example: <link rel="alternate" hreflang="en" href="{{ en_url }}"> #}
+        {# Example: <link rel="alternate" hreflang="fa" href="{{ fa_url }}"> #}
+    {% endblock hreflang_tags %}
+
     {% get_current_language as LANGUAGE_CODE %}
     {% if LANGUAGE_CODE == 'en' %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">

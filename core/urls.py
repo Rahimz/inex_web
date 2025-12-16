@@ -25,6 +25,7 @@ urlpatterns = i18n_patterns(
     path('search/', include('search.urls')),
     path('rosetta/', include('rosetta.urls')),
     path('admin/', admin.site.urls),
+    path('i18n/', include('django.conf.urls.i18n')),
     path('', include('generals.urls')),
 )
 

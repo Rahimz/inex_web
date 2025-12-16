@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-23 13:32+0330\n"
-"PO-Revision-Date: 2025-11-23 10:02+0000\n"
+"POT-Creation-Date: 2025-12-16 13:32+0330\n"
+"PO-Revision-Date: 2025-12-16 10:03+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -19,15 +19,16 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.10.2\n"
 
-#: core/settings/base.py:122
+#: core/settings/base.py:123
 msgid "Farsi"
 msgstr "فارسی"
 
-#: core/settings/base.py:123
+#: core/settings/base.py:124
 msgid "English"
 msgstr ""
 
 #: generals/views.py:11 templates/_header.html:42
+#: templates/_header_new.html:16
 msgid "Home"
 msgstr "خانه"
 
@@ -35,23 +36,28 @@ msgstr "خانه"
 msgid "Our Featured Projects"
 msgstr "پروژه‌های منتخب ما"
 
-#: projects/models.py:67 templates/projects/project_details_new.html:55
+#: projects/models.py:68 templates/projects/project_details_new.html:67
 msgid "Location"
 msgstr "موقعیت"
 
-#: projects/models.py:70 templates/projects/project_details_new.html:63
+#: projects/models.py:71 templates/projects/project_details_new.html:75
 msgid "Completed date"
 msgstr "تاریخ انجام"
 
-#: projects/models.py:91 templates/projects/project_details_new.html:59
+#: projects/models.py:92 templates/projects/project_details_new.html:71
 msgid "Area"
 msgstr "مساحت"
 
-#: projects/views.py:16 templates/_header.html:46
+#: projects/models.py:106
+msgid "Rank"
+msgstr "رتبه"
+
+#: projects/views.py:27 templates/_header.html:46
+#: templates/_header_new.html:19
 msgid "Projects"
 msgstr "پروژه‌ها"
 
-#: projects/views.py:32
+#: projects/views.py:45
 msgid "Project"
 msgstr "پروژه"
 
@@ -59,9 +65,47 @@ msgstr "پروژه"
 msgid "Search results"
 msgstr "نتایج جستجو"
 
-#: templates/_base.html:117
+#: templates/_base.html:12
+msgid "InEx design"
+msgstr "اینکس دیزاین"
+
+#: templates/_base.html:17
+msgid ""
+"Professional design and renovation services for stores, offices, and "
+"exhibition stands by Mahmoud Rahmatollahi"
+msgstr ""
+"طراحی و بازسازی حرفه‌ای فروشگاه، دفاتر اداری و غرفه‌های نمایشگاهی توسط محمود"
+" رحمت‌الهی"
+
+#: templates/_base.html:18
+msgid ""
+"Interior Design, Store Design, Office Renovation, Exhibition Stand Design"
+msgstr ""
+"طراحی داخلی، طراحی فروشگاه، طراحی و بازسازی دفاتر اداری، طراحی و اجرای "
+"غرفه‌های نمایشگاهی"
+
+#: templates/_base.html:19 templates/index.html:148
+msgid "Mahmoud Rahmatollahi"
+msgstr "محمود رحمت‌الهی"
+
+#: templates/_base.html:23
+msgid "Store, Office & Exhibition Stand Design"
+msgstr "طراحی فروشگاه، دفاتر غرفه‌های نمایشگاهی"
+
+#: templates/_base.html:24
+msgid ""
+"Professional design and renovation services for stores, offices, and "
+"exhibition stands."
+msgstr "طراحی و بازسازی حرفه‌ای فروشگاه‌ها، دفاتر اداری و غرفه‌های نمایشگاهی"
+
+#: templates/_base.html:178
 msgid "Search"
 msgstr "جستجو"
+
+#: templates/_footer.html:7 templates/_header_new.html:5
+#| msgid "InEx design"
+msgid "InEx Design Logo"
+msgstr "لوگوی اینکس دیزاین"
 
 #: templates/_footer.html:11
 msgid ""
@@ -73,19 +117,36 @@ msgstr ""
 "طراحی و اجرای فضاهای داخلی و بیرونی دارد. تخصص وی در فضاهای فروشگاهی و تجاری"
 " است و تجربه زیادی هم در طراحی و اجرای غرفه‌های نمایشگاهی دارد."
 
-#: templates/_footer.html:73
+#: templates/_footer.html:14
+msgid "All right reserved to inex-design.com"
+msgstr "تمام حقوق برای inex-design.com محفوظ است"
+
+#: templates/_footer.html:15
+msgid "Design by"
+msgstr "طراحی شده توسط"
+
+#: templates/_footer.html:22
 msgid "Contact Us"
 msgstr "تماس با ما"
 
-#: templates/_footer.html:76
+#: templates/_footer.html:26
 msgid "Tehran, Iran"
 msgstr "تهران، ایران"
 
-#: templates/index.html:19
+#: templates/_header_new.html:7
+msgid "Toggle navigation"
+msgstr "تفییر زبان"
+
+#: templates/_header_new.html:27
+#: templates/projects/_projects_block_simple_new.html:13
+msgid "All"
+msgstr "همه"
+
+#: templates/index.html:38
 msgid "Interior design"
 msgstr "طراحی داخلی"
 
-#: templates/index.html:20
+#: templates/index.html:39
 msgid ""
 "Transform your space with our expert interior design services. We specialize"
 " in creating harmonious environments that reflect your unique style and "
@@ -99,15 +160,15 @@ msgstr ""
 "می‌کند و تضمین می‌کند که هر جزئیات متناسب با نیازهای شما باشد. هنر زندگی "
 "زیبا را امروز با ما کشف کنید."
 
-#: templates/index.html:23 templates/index.html:44
+#: templates/index.html:42 templates/index.html:63
 msgid "See projects"
 msgstr "دیدن پروژه‌ها"
 
-#: templates/index.html:41
+#: templates/index.html:60
 msgid "Exterior design"
 msgstr "طراحی بیرونی"
 
-#: templates/index.html:42
+#: templates/index.html:61
 msgid ""
 "Elevate your property’s curb appeal with our exceptional exterior design "
 "services. We specialize in crafting stunning facades and outdoor spaces that"
@@ -121,15 +182,11 @@ msgstr ""
 "جذابی را خلق می‌کند که منعکس‌کننده دیدگاه شما هستند. همین امروز نمای بیرونی "
 "خانه خود را به یک شاهکار تبدیل کنید."
 
-#: templates/index.html:128
+#: templates/index.html:147
 msgid "About us"
 msgstr "درباره ما"
 
-#: templates/index.html:129
-msgid "Mahmoud Rahmatollahi"
-msgstr "محمود رحمت‌الهی"
-
-#: templates/index.html:129
+#: templates/index.html:148
 msgid ""
 "is a seasoned interior and exterior designer with over 20 years of "
 "experience. Renowned for his innovative designs, he leads a skilled team "
@@ -139,7 +196,7 @@ msgstr ""
 "طرح‌های نوآورانه‌اش مشهور است، رهبری یک تیم ماهر و متخصص در ساخت و ساز و "
 "نوسازی را بر عهده دارد."
 
-#: templates/index.html:130
+#: templates/index.html:149
 msgid ""
 "Together, they transform spaces into stunning environments, blending "
 "functionality with aesthetics to create unique, personalized settings for "
@@ -149,7 +206,7 @@ msgstr ""
 "کارایی و زیبایی‌شناسی، محیطی منحصر به فرد و شخصی‌سازی‌شده برای هر مشتری "
 "ایجاد می‌کنند."
 
-#: templates/index.html:169
+#: templates/index.html:188
 msgid ""
 "Architecture is the learned game, correct and magnificent, of forms "
 "assembled in the light."
@@ -157,45 +214,48 @@ msgstr ""
 "معماری بازی آموخته‌شده، صحیح و باشکوهِ فرم‌هایی است که در نور گرد هم "
 "آمده‌اند."
 
-#: templates/index.html:171
+#: templates/index.html:190
 msgid "Le Corbusier"
 msgstr "لو کوربوزیه"
 
-#: templates/index.html:178
+#: templates/index.html:197
 msgid "Good design is a lot like clear thinking made visual"
 msgstr "طراحی خوب بسیار شبیه تفکر واضحی است که به صورت بصری ساخته شده است"
 
-#: templates/index.html:180
+#: templates/index.html:199
 msgid "Ellen Lupton"
 msgstr "الن لوپتون"
 
-#: templates/index.html:187
+#: templates/index.html:206
 msgid "Architecture is the art of how to waste space"
 msgstr "معماری هنر چگونگی هدر دادن فضاست"
 
-#: templates/index.html:189
+#: templates/index.html:208
 msgid "Philip Johnson"
 msgstr "فیلیپ جانسون"
 
 #: templates/projects/_projects_block.html:9
 #: templates/projects/_projects_block_simple.html:9
+#: templates/projects/_projects_block_simple_new.html:21
 msgid "See All"
 msgstr "دیدن همه"
 
 #: templates/projects/_projects_block.html:20
 #: templates/projects/_projects_block_simple.html:20
+#: templates/projects/_projects_block_simple_new.html:36
 msgid "Search query"
 msgstr "عبارت جستجو"
 
-#: templates/projects/_projects_block.html:40
-#: templates/projects/_projects_block_simple.html:40
+#: templates/projects/_projects_block.html:44
+#: templates/projects/_projects_block_simple.html:43
+#: templates/projects/_projects_block_simple_new.html:66
 msgid "DETAILS"
 msgstr "جزییات"
 
-#: templates/projects/project_details_new.html:51
+#: templates/projects/project_details_new.html:63
 msgid "Client"
 msgstr "کارفرما"
 
-#: templates/projects/project_details_new.html:67
+#: templates/projects/project_details_new.html:79
 msgid "Details"
 msgstr "جزییات"

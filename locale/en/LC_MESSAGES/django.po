@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-23 13:32+0330\n"
+"POT-Creation-Date: 2025-12-16 13:32+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,15 +18,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: core/settings/base.py:122
+#: core/settings/base.py:123
 msgid "Farsi"
 msgstr ""
 
-#: core/settings/base.py:123
+#: core/settings/base.py:124
 msgid "English"
 msgstr ""
 
-#: generals/views.py:11 templates/_header.html:42
+#: generals/views.py:11 templates/_header.html:42 templates/_header_new.html:16
 msgid "Home"
 msgstr ""
 
@@ -34,23 +34,27 @@ msgstr ""
 msgid "Our Featured Projects"
 msgstr ""
 
-#: projects/models.py:67 templates/projects/project_details_new.html:55
+#: projects/models.py:68 templates/projects/project_details_new.html:67
 msgid "Location"
 msgstr ""
 
-#: projects/models.py:70 templates/projects/project_details_new.html:63
+#: projects/models.py:71 templates/projects/project_details_new.html:75
 msgid "Completed date"
 msgstr ""
 
-#: projects/models.py:91 templates/projects/project_details_new.html:59
+#: projects/models.py:92 templates/projects/project_details_new.html:71
 msgid "Area"
 msgstr ""
 
-#: projects/views.py:16 templates/_header.html:46
+#: projects/models.py:106
+msgid "Rank"
+msgstr ""
+
+#: projects/views.py:27 templates/_header.html:46 templates/_header_new.html:19
 msgid "Projects"
 msgstr ""
 
-#: projects/views.py:32
+#: projects/views.py:45
 msgid "Project"
 msgstr ""
 
@@ -58,8 +62,41 @@ msgstr ""
 msgid "Search results"
 msgstr ""
 
-#: templates/_base.html:117
+#: templates/_base.html:12
+msgid "InEx design"
+msgstr ""
+
+#: templates/_base.html:17
+msgid ""
+"Professional design and renovation services for stores, offices, and "
+"exhibition stands by Mahmoud Rahmatollahi"
+msgstr ""
+
+#: templates/_base.html:18
+msgid ""
+"Interior Design, Store Design, Office Renovation, Exhibition Stand Design"
+msgstr ""
+
+#: templates/_base.html:19 templates/index.html:148
+msgid "Mahmoud Rahmatollahi"
+msgstr ""
+
+#: templates/_base.html:23
+msgid "Store, Office & Exhibition Stand Design"
+msgstr ""
+
+#: templates/_base.html:24
+msgid ""
+"Professional design and renovation services for stores, offices, and "
+"exhibition stands."
+msgstr ""
+
+#: templates/_base.html:178
 msgid "Search"
+msgstr ""
+
+#: templates/_footer.html:7 templates/_header_new.html:5
+msgid "InEx Design Logo"
 msgstr ""
 
 #: templates/_footer.html:11
@@ -69,19 +106,36 @@ msgid ""
 "comercial spaces and has lot of experience in Exhibition stand design."
 msgstr ""
 
-#: templates/_footer.html:73
+#: templates/_footer.html:14
+msgid "All right reserved to inex-design.com"
+msgstr ""
+
+#: templates/_footer.html:15
+msgid "Design by"
+msgstr ""
+
+#: templates/_footer.html:22
 msgid "Contact Us"
 msgstr ""
 
-#: templates/_footer.html:76
+#: templates/_footer.html:26
 msgid "Tehran, Iran"
 msgstr ""
 
-#: templates/index.html:19
+#: templates/_header_new.html:7
+msgid "Toggle navigation"
+msgstr ""
+
+#: templates/_header_new.html:27
+#: templates/projects/_projects_block_simple_new.html:13
+msgid "All"
+msgstr ""
+
+#: templates/index.html:38
 msgid "Interior design"
 msgstr ""
 
-#: templates/index.html:20
+#: templates/index.html:39
 msgid ""
 "Transform your space with our expert interior design services. We specialize "
 "in creating harmonious environments that reflect your unique style and "
@@ -90,15 +144,15 @@ msgid ""
 "needs. Discover the art of living beautifully with us today"
 msgstr ""
 
-#: templates/index.html:23 templates/index.html:44
+#: templates/index.html:42 templates/index.html:63
 msgid "See projects"
 msgstr ""
 
-#: templates/index.html:41
+#: templates/index.html:60
 msgid "Exterior design"
 msgstr ""
 
-#: templates/index.html:42
+#: templates/index.html:61
 msgid ""
 "Elevate your property’s curb appeal with our exceptional exterior design "
 "services. We specialize in crafting stunning facades and outdoor spaces that "
@@ -107,73 +161,72 @@ msgid ""
 "vision. Transform your home’s exterior into a masterpiece today"
 msgstr ""
 
-#: templates/index.html:128
+#: templates/index.html:147
 msgid "About us"
 msgstr ""
 
-#: templates/index.html:129
-msgid "Mahmoud Rahmatollahi"
-msgstr ""
-
-#: templates/index.html:129
+#: templates/index.html:148
 msgid ""
 "is a seasoned interior and exterior designer with over 20 years of "
 "experience. Renowned for his innovative designs, he leads a skilled team "
 "specializing in construction and renovation."
 msgstr ""
 
-#: templates/index.html:130
+#: templates/index.html:149
 msgid ""
 "Together, they transform spaces into stunning environments, blending "
 "functionality with aesthetics to create unique, personalized settings for "
 "every client."
 msgstr ""
 
-#: templates/index.html:169
+#: templates/index.html:188
 msgid ""
 "Architecture is the learned game, correct and magnificent, of forms "
 "assembled in the light."
 msgstr ""
 
-#: templates/index.html:171
+#: templates/index.html:190
 msgid "Le Corbusier"
 msgstr ""
 
-#: templates/index.html:178
+#: templates/index.html:197
 msgid "Good design is a lot like clear thinking made visual"
 msgstr ""
 
-#: templates/index.html:180
+#: templates/index.html:199
 msgid "Ellen Lupton"
 msgstr ""
 
-#: templates/index.html:187
+#: templates/index.html:206
 msgid "Architecture is the art of how to waste space"
 msgstr ""
 
-#: templates/index.html:189
+#: templates/index.html:208
 msgid "Philip Johnson"
 msgstr ""
 
 #: templates/projects/_projects_block.html:9
 #: templates/projects/_projects_block_simple.html:9
+#: templates/projects/_projects_block_simple_new.html:21
 msgid "See All"
 msgstr ""
 
 #: templates/projects/_projects_block.html:20
 #: templates/projects/_projects_block_simple.html:20
+#: templates/projects/_projects_block_simple_new.html:36
 msgid "Search query"
 msgstr ""
 
-#: templates/projects/_projects_block.html:40
-#: templates/projects/_projects_block_simple.html:40
+#: templates/projects/_projects_block.html:44
+#: templates/projects/_projects_block_simple.html:43
+#: templates/projects/_projects_block_simple_new.html:66
 msgid "DETAILS"
 msgstr ""
 
-#: templates/projects/project_details_new.html:51
+#: templates/projects/project_details_new.html:63
 msgid "Client"
 msgstr ""
 
-#: templates/projects/project_details_new.html:67
+#: templates/projects/project_details_new.html:79
 msgid "Details"
 msgstr ""

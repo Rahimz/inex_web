@@ -22,7 +22,10 @@
                     <h5 class="widget-title text-uppercase pb-2">{% trans "Contact Us" %}</h5>
                     <p><a href="tel:+989123382562" dir="ltr">+ 98 912 338 25 62</a></p>
                     <p><a href="tel:+982122174635" dir="ltr">+ 98 21 2217 46 35</a></p>
-                    <p><a href="https://www.instagram.com/mahmoudrahmatollahi" rel="nofollow">{% trans "Instagram Mahmoud Rahmatollahi" %}</a></p>
+                    <p><a href="https://www.instagram.com/mahmoudrahmatollahi" rel="nofollow" alt="{% trans 'Instagram Mahmoud Rahmatollahi' %}">
+                        <img src="{% static 'images/instagram-logo.jpeg' %}" alt="instagram-logo" width="24px" height="auto">
+                        {% trans 'Mahmoud Rahmatollahi on Instagram' %}
+                    </a></p>
                     <p><a href="mailto:">mahmoud.rahmatollahi@gmail.com</a></p>
                     <p>{% trans "Tehran, Iran" %}</p>
                 </div>

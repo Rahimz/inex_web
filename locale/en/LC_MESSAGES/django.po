@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-16 13:32+0330\n"
+"POT-Creation-Date: 2025-12-17 09:36+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -66,32 +66,32 @@ msgstr ""
 msgid "InEx design"
 msgstr ""
 
-#: templates/_base.html:17
+#: templates/_base.html:20
 msgid ""
 "Professional design and renovation services for stores, offices, and "
 "exhibition stands by Mahmoud Rahmatollahi"
 msgstr ""
 
-#: templates/_base.html:18
+#: templates/_base.html:21
 msgid ""
 "Interior Design, Store Design, Office Renovation, Exhibition Stand Design"
 msgstr ""
 
-#: templates/_base.html:19 templates/index.html:148
+#: templates/_base.html:22 templates/index.html:149
 msgid "Mahmoud Rahmatollahi"
 msgstr ""
 
-#: templates/_base.html:23
+#: templates/_base.html:26
 msgid "Store, Office & Exhibition Stand Design"
 msgstr ""
 
-#: templates/_base.html:24
+#: templates/_base.html:27
 msgid ""
 "Professional design and renovation services for stores, offices, and "
 "exhibition stands."
 msgstr ""
 
-#: templates/_base.html:178
+#: templates/_base.html:177
 msgid "Search"
 msgstr ""
 
@@ -118,7 +118,15 @@ msgstr ""
 msgid "Contact Us"
 msgstr ""
 
-#: templates/_footer.html:26
+#: templates/_footer.html:25
+msgid "Instagram Mahmoud Rahmatollahi"
+msgstr ""
+
+#: templates/_footer.html:27
+msgid "Mahmoud Rahmatollahi on Instagram"
+msgstr ""
+
+#: templates/_footer.html:30
 msgid "Tehran, Iran"
 msgstr ""
 
@@ -161,47 +169,47 @@ msgid ""
 "vision. Transform your home’s exterior into a masterpiece today"
 msgstr ""
 
-#: templates/index.html:147
+#: templates/index.html:148
 msgid "About us"
 msgstr ""
 
-#: templates/index.html:148
+#: templates/index.html:149
 msgid ""
 "is a seasoned interior and exterior designer with over 20 years of "
 "experience. Renowned for his innovative designs, he leads a skilled team "
 "specializing in construction and renovation."
 msgstr ""
 
-#: templates/index.html:149
+#: templates/index.html:150
 msgid ""
 "Together, they transform spaces into stunning environments, blending "
 "functionality with aesthetics to create unique, personalized settings for "
 "every client."
 msgstr ""
 
-#: templates/index.html:188
+#: templates/index.html:189
 msgid ""
 "Architecture is the learned game, correct and magnificent, of forms "
 "assembled in the light."
 msgstr ""
 
-#: templates/index.html:190
+#: templates/index.html:191
 msgid "Le Corbusier"
 msgstr ""
 
-#: templates/index.html:197
+#: templates/index.html:198
 msgid "Good design is a lot like clear thinking made visual"
 msgstr ""
 
-#: templates/index.html:199
+#: templates/index.html:200
 msgid "Ellen Lupton"
 msgstr ""
 
-#: templates/index.html:206
+#: templates/index.html:207
 msgid "Architecture is the art of how to waste space"
 msgstr ""
 
-#: templates/index.html:208
+#: templates/index.html:209
 msgid "Philip Johnson"
 msgstr ""
 

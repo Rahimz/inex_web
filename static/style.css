@@ -450,7 +450,8 @@ h5 {
   display: inline-block;
   transform: translateY(100%);
   position: absolute;
-  left: 0;
+  /* left: 0; */
+  inset-inline-start: 0; /* NEW: This automatically becomes 'left' in LTR and 'right' in RTL */
   transition: inherit;
   color: var(--bs-dark);
 }
@@ -720,6 +721,28 @@ h5 {
   height: 25px;
 }
 
+/* RTL btn-arrow */
+/* 1. Reposition the arrow to the left and flip it horizontally */
+[dir="rtl"] .btn.btn-arrow svg {
+  right: auto; /* Unset the original 'right' property */
+  left: 21px;  /* Position it from the left instead */
+
+  /* Combine the original vertical centering with a horizontal flip */
+  transform: translateY(-50%) scaleX(-1); 
+}
+
+/* 2. Make the text move to the RIGHT on hover */
+[dir="rtl"] .btn.btn-arrow:hover span {
+  transform: translate3d(7px, 0, 0); /* Use a positive value to move right */
+}
+
+/* 3. Make the arrow disappear to the LEFT on hover */
+[dir="rtl"] .btn.btn-arrow:hover svg {
+  right: auto; /* Unset the original 'right' property */
+  left: 0;     /* Move it to the far left on fade-out */
+}
+
+
 /* - Search Bar
 ------------------------------------------------------------- */
 .search-box {
@@ -829,6 +852,10 @@ h5 {
   left: -730px;
   bottom: 160px;
 }
+[dir="rtl"] #billboard .swiper-pagination {
+  left: auto; /* IMPORTANT: Unset the 'left' property from the LTR rule */
+  right: -730px; /* Set the position from the right edge instead */
+}
 
 .swiper-pagination .swiper-pagination-bullet {
   width: 10px;
@@ -863,6 +890,27 @@ h5 {
 .swiper-pagination span.swiper-pagination-bullet:hover:after {
   transform: scale(2);
 }
+
+.banner-item {
+    background-image: url('images/hero-inex.jpg');
+    background-repeat: no-repeat;
+    height: 682px;
+    background-position: right;
+}
+.banner-item-2 {
+    background-image: url('images/hero-inex-2.jpg');
+    background-repeat: no-repeat;
+    height: 682px;
+    background-position: right;
+}
+[dir="rtl"] .banner-item {
+  background-position: left;
+}
+[dir="rtl"] .banner-item-2 {
+  background-position: left;
+}
+
+
 
 @media only screen and (max-width: 1200px) {
   #billboard .banner-content {

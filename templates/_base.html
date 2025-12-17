@@ -14,6 +14,9 @@
         | {% block title %}{% endblock title %}
         {% endif %}
     </title>
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'images/inex-design-logo.png' %}" type="image/png">
+
     <meta name="description" content="{% trans 'Professional design and renovation services for stores, offices, and exhibition stands by Mahmoud Rahmatollahi' %}.">
     <meta name="keywords" content="{% trans 'Interior Design, Store Design, Office Renovation, Exhibition Stand Design' %}">
     <meta name="author" content="{% trans 'Mahmoud Rahmatollahi' %}">
@@ -74,10 +77,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
     {% endcomment %}
 
-
-    <title>
-        InEx Design
-    </title>
 
     {% block head %}
 

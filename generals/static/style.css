@@ -1131,3 +1131,40 @@ h5 {
   background-color: var(--bs-primary);
   color: var(--bs-light);
 }
+
+/* WHATSAPP */
+.whatsapp-button {
+    position: fixed;
+    
+    /* Using logical properties for better LTR/RTL support */
+    inset-block-end: 20px; /* Equivalent to 'bottom: 20px' */
+    inset-inline-start: 20px; /* Equivalent to 'left: 20px' in LTR */
+
+    /* Stacking order to ensure it's on top */
+    z-index: 9999; 
+
+    /* Visual styling */
+    background-color: white;
+    width: 60px; /* Set a consistent size */
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+    /* Flexbox to perfectly center the icon inside */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Add a nice transition for hover effects */
+    transition: transform 0.2s ease-in-out;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.whatsapp-button img {
+    width: 35px; /* Adjust image size to fit well inside the button */
+    height: 35px;
+}
+

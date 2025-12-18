@@ -1131,3 +1131,20 @@ h5 {
   background-color: var(--bs-primary);
   color: var(--bs-light);
 }
+
+/* WHATSAPP */
+#whatsapp-button {
+    position: fixed;
+    bottom: 20px;      /* Distance from the bottom of the page */
+    left: 20px;        /* Distance from the left side of the page */
+    z-index: 1000;     /* Makes sure it stays above other content */
+    background-color: white; /* Optional: background color for the button */
+    border-radius: 50%; /* Makes the button circular */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Optional: adds shadow */
+    padding: 5px;     /* Padding around the image */
+}
+
+#whatsapp-button img {
+    width: 50px;       /* Width of the WhatsApp logo */
+    height: 50px;      /* Height of the WhatsApp logo */
+}

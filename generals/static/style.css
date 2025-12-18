@@ -508,35 +508,6 @@ h5 {
   }
 }
 
-/*--- Image hover Effects
------------------------------------------------*/
-.image-zoom-effect {
-  overflow: hidden;
-}
-
-.image-zoom-effect .image-holder {
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-  transform: scale(1);
-  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.image-zoom-effect:hover .image-holder {
-  transform: scale(0.95);
-}
-
-.image-zoom-effect img {
-  transform: scale(1);
-  will-change: transform;
-  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  z-index: 0;
-}
-
-.image-zoom-effect:hover img {
-  transform: scale(1.1);
-}
-
 /* Link Effect
 ------------------------------------------------------------- */
 .link-effect {
@@ -1137,8 +1108,9 @@ h5 {
     position: fixed;
     
     /* Using logical properties for better LTR/RTL support */
-    inset-block-end: 20px; /* Equivalent to 'bottom: 20px' */
-    inset-inline-start: 20px; /* Equivalent to 'left: 20px' in LTR */
+    inset-block-end: 20px; /* bottom: 20px */
+    inset-inline-start: 20px; /* right: 20px in RTL */
+    inset-inline-end: auto; /* Ensure it's unset */
 
     /* Stacking order to ensure it's on top */
     z-index: 9999; 
@@ -1167,4 +1139,3 @@ h5 {
     width: 35px; /* Adjust image size to fit well inside the button */
     height: 35px;
 }
-

@@ -16,7 +16,7 @@ def AnalyticsHomeView(request, filter=None, date=None, **kwargs):
     if not request.user.is_superuser:
         raise Http404
     
-    # base_url = 'http://computermuseum.ir/'
+    # base_url = 'http://inex-design.com/'
     # base_url_length = len(base_url)
         
     # logs = RequestLog.objects.annotate(
@@ -24,7 +24,20 @@ def AnalyticsHomeView(request, filter=None, date=None, **kwargs):
     # )
     device = kwargs.get('device', None)
     base = kwargs.get('base', None)
-    logs = RequestLog.objects.all()
+    lan = kwargs.get('lan', 'all') # language
+    lan_q = lan + '/' if lan in ('en', 'fa') else ''
+    
+    HTTP_DOMAIN = 'http://inex-design.com/'
+    HTTP_W_DOMAIN = 'http://www.inex-design.com/'
+    HTTPS_DOMAIN = 'https://inex-design.com/'
+    HTTPS_W_DOMAIN = 'https://www.inex-design.com/'
+    
+    # HTTP_DOMAIN = 'http://127.0.0.1:8000/'
+    # HTTPS_DOMAIN = 'https://127.0.0.1:8000/'
+    
+    
+    
+    logs = RequestLog.objects.exclude(requested_url__icontains='/analytics/')
     if date not in (None, 'None'):
         try:
             date_obj = datetime.strptime(date, "%Y-%m-%d")
@@ -46,29 +59,34 @@ def AnalyticsHomeView(request, filter=None, date=None, **kwargs):
             .annotate(ip_count=Count('ip_address'))  # Count occurrences of each requested_url
             .order_by('-ip_count')  # Optional: Order by count descending
         )
-        
     
-        
-
+    if lan in ('en', 'fa'):
+        logs = logs.filter(
+            Q(requested_url__startswith=f"{HTTP_DOMAIN}{lan_q}") | 
+            Q(requested_url__startswith=f"{HTTPS_DOMAIN}{lan_q}") | 
+            Q(requested_url__startswith=f"{HTTP_W_DOMAIN}{lan_q}") | 
+            Q(requested_url__startswith=f"{HTTPS_W_DOMAIN}{lan_q}")
+        )
     
     if filter == 'home' :
         logs = logs.filter(
-            Q(requested_url__exact='http://computermuseum.ir/') | 
-            Q(requested_url__exact='https://computermuseum.ir/') | 
-            Q(requested_url__exact='http://www.computermuseum.ir/') | 
-            Q(requested_url__exact='https://www.computermuseum.ir/')
+            Q(requested_url__exact=f"{HTTP_DOMAIN}") |  Q(requested_url__exact=f"{HTTP_DOMAIN}en/") | Q(requested_url__exact=f"{HTTP_DOMAIN}fa/") |
+            Q(requested_url__exact=f"{HTTPS_DOMAIN}") |  Q(requested_url__exact=f"{HTTPS_DOMAIN}en/") | Q(requested_url__exact=f"{HTTPS_DOMAIN}fa/") |
+            Q(requested_url__exact=f"{HTTP_W_DOMAIN}") |  Q(requested_url__exact=f"{HTTP_W_DOMAIN}en/") | Q(requested_url__exact=f"{HTTP_W_DOMAIN}fa/") |
+            Q(requested_url__exact=f"{HTTPS_W_DOMAIN}") | Q(requested_url__exact=f"{HTTPS_W_DOMAIN}en/") | Q(requested_url__exact=f"{HTTPS_W_DOMAIN}fa/")
         )
+
+            
     
-    if filter == 'qr':
-        logs = logs.filter(requested_url__startswith='http://computermuseum.ir/qr/')    
+    if filter == 'projects':
+        logs = logs.filter(
+            Q(requested_url__icontains=f"/projects/")
+        )
         
-    if filter in ( 'crowdsourcing' , 'tickets', 'tickets-landing', 'ganjoor', 'qr-0a3c528e', 'nowruz-1404'):
-        query = filter.replace('-', '/')
-        if filter == 'nowruz-1404':
-            query = filter
-        print(query)
-        # 'https://computermuseum.ir/qr/0a3c528e-e1ec-4e44-a2ea-2359d848eb61/'
-        logs = logs.filter(requested_url__icontains=query)
+    if filter in ('store', 'office', 'restaurant', 'residential', 'exhibition'):
+        logs = logs.filter(
+            requested_url__icontains=f"/projects/categories/{filter}/"
+            )
         
     if device and device != 'None':
         try:
@@ -82,29 +100,30 @@ def AnalyticsHomeView(request, filter=None, date=None, **kwargs):
         logs_stat = logs.aggregate(count=Sum('ip_count'))['count']
     
     # logs = logs[:20]
-    page=None
-    if logs.count() > 100:
-        # pagination
-        paginator = Paginator(logs, 25)  # 20 order in each page
-        page = request.GET.get('page')
-        try:
-            logs = paginator.page(page)
-        except PageNotAnInteger:
-            # If page is not an integer deliver the first page
-            logs = paginator.page(1)
-        except EmptyPage:
-            # If page is out of range deliver last page of results
-            logs = paginator.page(paginator.num_pages)
+    # page=None
+    # if logs.count() > 100:
+    #     # pagination
+    #     paginator = Paginator(logs, 25)  # 20 order in each page
+    #     page = request.GET.get('page')
+    #     try:
+    #         logs = paginator.page(page)
+    #     except PageNotAnInteger:
+    #         # If page is not an integer deliver the first page
+    #         logs = paginator.page(1)
+    #     except EmptyPage:
+    #         # If page is out of range deliver last page of results
+    #         logs = paginator.page(paginator.num_pages)
     
     context = dict(
         page_title=_("Analytics"),
         logs=logs,
         logs_stat=logs_stat,
-        page=page,
+        # page=page,
         date=date,
         filter=filter,
         device=device,
-        base=base
+        base=base,
+        lan=lan
     )
     return render(
         request, 

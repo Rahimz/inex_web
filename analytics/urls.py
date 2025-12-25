@@ -5,6 +5,7 @@ from . import views
 app_name = 'analytics'
 
 urlpatterns = [
-    path('base/<str:base>/filter/<str:filter>/date/<str:date>/device/<str:device>/', views.AnalyticsHomeView, name='analytics_home_filter'),
+    # path('base/<str:base>/filter/<str:filter>/date/<str:date>/device/<str:device>/', views.AnalyticsHomeView, name='analytics_home_filter'),
+    path('base/<str:base>/lan/<str:lan>/filter/<str:filter>/date/<str:date>/device/<str:device>/', views.AnalyticsHomeView, name='analytics_home_filter'),
     path('', views.AnalyticsHomeView, name='analytics_home'),
 ]

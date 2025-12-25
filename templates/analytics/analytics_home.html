@@ -35,22 +35,10 @@
         <br>
         <span class="m-1 d-inline-block">Date</span>
         <a href="{% url 'analytics:analytics_home_filter' base=base lan=lan filter=filter device=device date=None %}" class="btn btn-sm {% if date == 'None' or date == None %}btn-success{% else %}btn-outline-secondary{% endif %}">All</a>
-        <a href="{% url 'analytics:analytics_home_filter' base=base lan=lan filter=filter device=device date='2025-03-21' %}" class="btn btn-sm {% if date == '2025-03-21' %}btn-success{% else %}btn-outline-secondary{% endif %}">2025-03-21</a>
-        <a href="{% url 'analytics:analytics_home_filter' base=base lan=lan filter=filter device=device date='2025-03-22' %}" class="btn btn-sm {% if date == '2025-03-22' %}btn-success{% else %}btn-outline-secondary{% endif %}">2025-03-22</a>
-        <a href="{% url 'analytics:analytics_home_filter' base=base lan=lan filter=filter device=device date='2025-03-23' %}" class="btn btn-sm {% if date == '2025-03-23' %}btn-success{% else %}btn-outline-secondary{% endif %}">2025-03-23</a>
-        <a href="{% url 'analytics:analytics_home_filter' base=base lan=lan filter=filter device=device date='2025-03-24' %}" class="btn btn-sm {% if date == '2025-03-24' %}btn-success{% else %}btn-outline-secondary{% endif %}">2025-03-24</a>
-        <a href="{% url 'analytics:analytics_home_filter' base=base lan=lan filter=filter device=device date='2025-03-25' %}" class="btn btn-sm {% if date == '2025-03-25' %}btn-success{% else %}btn-outline-secondary{% endif %}">2025-03-25</a>
-        <a href="{% url 'analytics:analytics_home_filter' base=base lan=lan filter=filter device=device date='2025-03-26' %}" class="btn btn-sm {% if date == '2025-03-26' %}btn-success{% else %}btn-outline-secondary{% endif %}">2025-03-26</a>
-        <a href="{% url 'analytics:analytics_home_filter' base=base lan=lan filter=filter device=device date='2025-03-27' %}" class="btn btn-sm {% if date == '2025-03-27' %}btn-success{% else %}btn-outline-secondary{% endif %}">2025-03-27</a>
-        <a href="{% url 'analytics:analytics_home_filter' base=base lan=lan filter=filter device=device date='2025-03-28' %}" class="btn btn-sm {% if date == '2025-03-28' %}btn-success{% else %}btn-outline-secondary{% endif %}">2025-03-28</a>
-        <a href="{% url 'analytics:analytics_home_filter' base=base lan=lan filter=filter device=device date='2025-03-29' %}" class="btn btn-sm {% if date == '2025-03-29' %}btn-success{% else %}btn-outline-secondary{% endif %}">2025-03-29</a>
-        <a href="{% url 'analytics:analytics_home_filter' base=base lan=lan filter=filter device=device date='2025-03-30' %}" class="btn btn-sm {% if date == '2025-03-30' %}btn-success{% else %}btn-outline-secondary{% endif %}">2025-03-30</a>
-        <a href="{% url 'analytics:analytics_home_filter' base=base lan=lan filter=filter device=device date='2025-03-31' %}" class="btn btn-sm {% if date == '2025-03-31' %}btn-success{% else %}btn-outline-secondary{% endif %}">2025-03-31</a>
-        <a href="{% url 'analytics:analytics_home_filter' base=base lan=lan filter=filter device=device date='2025-04-01' %}" class="btn btn-sm {% if date == '2025-04-01' %}btn-success{% else %}btn-outline-secondary{% endif %}">2025-04-01</a>
-        <a href="{% url 'analytics:analytics_home_filter' base=base lan=lan filter=filter device=device date='2025-04-02' %}" class="btn btn-sm {% if date == '2025-04-02' %}btn-success{% else %}btn-outline-secondary{% endif %}">2025-04-02</a>
-        <a href="{% url 'analytics:analytics_home_filter' base=base lan=lan filter=filter device=device date='2025-04-03' %}" class="btn btn-sm {% if date == '2025-04-03' %}btn-success{% else %}btn-outline-secondary{% endif %}">2025-04-03</a>
-        <a href="{% url 'analytics:analytics_home_filter' base=base lan=lan filter=filter device=device date='2025-04-04' %}" class="btn btn-sm {% if date == '2025-04-04' %}btn-success{% else %}btn-outline-secondary{% endif %}">2025-04-04</a>
-
+        {% for date_i in dates_list %}
+        <a href="{% url 'analytics:analytics_home_filter' base=base lan=lan filter=filter device=device date=date_i %}" class="btn btn-sm {% if date == date_i %}btn-success{% else %}btn-outline-secondary{% endif %}">{{ date_i }}</a>
+        {% endfor %}
+        
     </div>
 <table class="table table-striped">
     <thead>

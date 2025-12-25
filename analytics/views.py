@@ -6,7 +6,8 @@ from django.utils.translation import gettext_lazy as _
 from django.db.models.functions import Substr, Length
 from django.db.models import Count, Sum, Q
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from datetime import datetime 
+from datetime import datetime, timedelta
+from django.utils import timezone 
 
 from .models import RequestLog
 
@@ -99,6 +100,12 @@ def AnalyticsHomeView(request, filter=None, date=None, **kwargs):
     elif base == 'ip':
         logs_stat = logs.aggregate(count=Sum('ip_count'))['count']
     
+    today = timezone.now()
+    # Create a list of date strings from today until 10 days ago
+    dates_list = [
+        (today - timedelta(days=i)).strftime('%Y-%m-%d') 
+        for i in range(11)  # Include today and the 10 days before
+    ]
     # logs = logs[:20]
     # page=None
     # if logs.count() > 100:
@@ -123,7 +130,8 @@ def AnalyticsHomeView(request, filter=None, date=None, **kwargs):
         filter=filter,
         device=device,
         base=base,
-        lan=lan
+        lan=lan,
+        dates_list=dates_list,
     )
     return render(
         request, 

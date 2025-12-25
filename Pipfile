@@ -13,6 +13,7 @@ uvicorn = "*"
 django-taggit = "*"
 django-cleanup = "*"
 django-parler = "*"
+user-agents = "*"
 
 [dev-packages]
 

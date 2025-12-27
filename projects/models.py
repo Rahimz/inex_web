@@ -3,6 +3,7 @@ from django.db import models
 from parler.models import TranslatableModel, TranslatedFields
 from django.utils.translation import gettext_lazy as _
 from tools.utils.make_thumbnail import make_thumbnail
+from django.urls import reverse
 
 # docs at https://django-parler.readthedocs.io/en/latest/compatibility.html
 # ordering with translated fields
@@ -109,6 +110,11 @@ class Project(TranslatableModel):
     
     class Meta:
         ordering = ('rank',)
+    
+    def get_absolute_url(self):
+        # We use 'self.slug' which will be the slug from the current active language
+        # thanks to django-parler's magic.
+        return reverse('projects:project_details', kwargs={'slug': self.slug})
     
     def __str__(self):
         return self.name

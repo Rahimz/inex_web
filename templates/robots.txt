@@ -4,3 +4,6 @@ Disallow: /media/
 Disallow: /static/
 Disallow: /private/
 Allow: /search/
+
+
+Sitemap: https://inex-design.com/sitemap.xml

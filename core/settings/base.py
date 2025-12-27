@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',  # The sitemaps framework requires this
+    'django.contrib.sitemaps', # The sitemaps framework
     
     # 3rd Party
     'rosetta',
@@ -165,3 +167,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # user auth
 AUTH_USER_MODEL = 'accounts.User'
+
+SITE_ID = 1

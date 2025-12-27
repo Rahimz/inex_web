@@ -16,6 +16,7 @@
         <br>
         <span class="m-1 d-inline-block">Page:</span>
         <a href="{% url 'analytics:analytics_home_filter' base=base lan=lan filter=None date=date device=device %}" class="btn btn-sm {% if filter == 'None' or filter == None %}btn-success{% else %}btn-outline-secondary{% endif %}">All</a>
+        <a href="{% url 'analytics:analytics_home_filter' base=base lan=lan filter='yektanet' date=date device=device %}" class="btn btn-sm {% if filter == 'yektanet' %}btn-success{% else %}btn-outline-secondary{% endif %}">yektanet</a>
         <a href="{% url 'analytics:analytics_home_filter' base=base lan=lan filter='home' date=date device=device %}" class="btn btn-sm {% if filter == 'home' %}btn-success{% else %}btn-outline-secondary{% endif %}">home</a>
         <a href="{% url 'analytics:analytics_home_filter' base=base lan=lan filter='store' date=date device=device %}" class="btn btn-sm {% if filter == 'store' %}btn-success{% else %}btn-outline-secondary{% endif %}">store</a>
         <a href="{% url 'analytics:analytics_home_filter' base=base lan=lan filter='office' date=date device=device %}" class="btn btn-sm {% if filter == 'office' %}btn-success{% else %}btn-outline-secondary{% endif %}">office</a>

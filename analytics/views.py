@@ -84,7 +84,7 @@ def AnalyticsHomeView(request, filter=None, date=None, **kwargs):
             Q(requested_url__icontains=f"/projects/")
         )
         
-    if filter in ('store', 'office', 'restaurant', 'residential', 'exhibition'):
+    if filter in ('store', 'office', 'restaurant', 'residential', 'exhibition', 'yektanet'):
         logs = logs.filter(
             requested_url__icontains=f"/projects/categories/{filter}/"
             )

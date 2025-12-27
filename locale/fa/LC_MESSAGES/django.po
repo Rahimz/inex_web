@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-17 09:36+0330\n"
-"PO-Revision-Date: 2025-12-17 06:07+0000\n"
+"POT-Creation-Date: 2025-12-27 12:24+0330\n"
+"PO-Revision-Date: 2025-12-27 09:01+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -17,18 +17,42 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Translated-Using: django-rosetta 0.10.2\n"
+"X-Translated-Using: django-rosetta 0.10.3\n"
 
-#: core/settings/base.py:123
+#: analytics/models.py:43
+msgid "Mobile"
+msgstr "موبایل"
+
+#: analytics/models.py:44
+msgid "Tablet"
+msgstr "تبلت"
+
+#: analytics/models.py:45
+msgid "Desktop"
+msgstr "دسکتاپ"
+
+#: analytics/models.py:46
+msgid "Bot"
+msgstr "بات"
+
+#: analytics/models.py:47
+msgid "Not applied"
+msgstr "تعیین نشده"
+
+#: analytics/views.py:125
+msgid "Analytics"
+msgstr "آنالیتیکز"
+
+#: core/settings/base.py:127
 msgid "Farsi"
 msgstr "فارسی"
 
-#: core/settings/base.py:124
+#: core/settings/base.py:128
 msgid "English"
 msgstr ""
 
-#: generals/views.py:11 templates/_header.html:42
-#: templates/_header_new.html:16
+#: generals/views.py:11 templates/404.html:15 templates/500.html:15
+#: templates/_header.html:42 templates/_header_new.html:16
 msgid "Home"
 msgstr "خانه"
 
@@ -36,19 +60,19 @@ msgstr "خانه"
 msgid "Our Featured Projects"
 msgstr "پروژه‌های منتخب ما"
 
-#: projects/models.py:68 templates/projects/project_details_new.html:67
+#: projects/models.py:69 templates/projects/project_details_new.html:67
 msgid "Location"
 msgstr "موقعیت"
 
-#: projects/models.py:71 templates/projects/project_details_new.html:75
+#: projects/models.py:72 templates/projects/project_details_new.html:75
 msgid "Completed date"
 msgstr "تاریخ انجام"
 
-#: projects/models.py:92 templates/projects/project_details_new.html:71
+#: projects/models.py:93 templates/projects/project_details_new.html:71
 msgid "Area"
 msgstr "مساحت"
 
-#: projects/models.py:106
+#: projects/models.py:107
 msgid "Rank"
 msgstr "رتبه"
 
@@ -65,11 +89,27 @@ msgstr "پروژه"
 msgid "Search results"
 msgstr "نتایج جستجو"
 
-#: templates/_base.html:12
+#: templates/404.html:6 templates/500.html:6 templates/_base.html:12
 msgid "InEx design"
 msgstr "اینکس دیزاین"
 
-#: templates/_base.html:20
+#: templates/404.html:9
+msgid "404 Error"
+msgstr "خطای ۴۰۴"
+
+#: templates/404.html:14
+msgid "There is nothing here!"
+msgstr "اینجا چیزی نیست!"
+
+#: templates/500.html:9
+msgid "500 Error"
+msgstr "خطای ۵۰۰"
+
+#: templates/500.html:14
+msgid "There is something wrong in our server, please contact the admins"
+msgstr "مشکلی در سرورهای ما است لطفا به ادمین‌های وب‌سایت اطلاع دهید"
+
+#: templates/_base.html:35
 msgid ""
 "Professional design and renovation services for stores, offices, and "
 "exhibition stands by Mahmoud Rahmatollahi"
@@ -77,28 +117,28 @@ msgstr ""
 "طراحی و بازسازی حرفه‌ای فروشگاه، دفاتر اداری و غرفه‌های نمایشگاهی توسط محمود"
 " رحمت‌الهی"
 
-#: templates/_base.html:21
+#: templates/_base.html:36
 msgid ""
 "Interior Design, Store Design, Office Renovation, Exhibition Stand Design"
 msgstr ""
 "طراحی داخلی، طراحی فروشگاه، طراحی و بازسازی دفاتر اداری، طراحی و اجرای "
 "غرفه‌های نمایشگاهی"
 
-#: templates/_base.html:22 templates/index.html:149
+#: templates/_base.html:37 templates/index.html:94
 msgid "Mahmoud Rahmatollahi"
 msgstr "محمود رحمت‌الهی"
 
-#: templates/_base.html:26
+#: templates/_base.html:41
 msgid "Store, Office & Exhibition Stand Design"
 msgstr "طراحی فروشگاه، دفاتر غرفه‌های نمایشگاهی"
 
-#: templates/_base.html:27
+#: templates/_base.html:42
 msgid ""
 "Professional design and renovation services for stores, offices, and "
 "exhibition stands."
 msgstr "طراحی و بازسازی حرفه‌ای فروشگاه‌ها، دفاتر اداری و غرفه‌های نمایشگاهی"
 
-#: templates/_base.html:177
+#: templates/_base.html:192
 msgid "Search"
 msgstr "جستجو"
 
@@ -129,12 +169,10 @@ msgid "Contact Us"
 msgstr "تماس با ما"
 
 #: templates/_footer.html:25
-#| msgid "Mahmoud Rahmatollahi"
 msgid "Instagram Mahmoud Rahmatollahi"
 msgstr "اینستاگرام محمود رحمت‌الهی"
 
 #: templates/_footer.html:27
-#| msgid "Mahmoud Rahmatollahi"
 msgid "Mahmoud Rahmatollahi on Instagram"
 msgstr "محمود رحمت‌الهی در اینستاگرام"
 
@@ -191,11 +229,11 @@ msgstr ""
 "جذابی را خلق می‌کند که منعکس‌کننده دیدگاه شما هستند. همین امروز نمای بیرونی "
 "خانه خود را به یک شاهکار تبدیل کنید."
 
-#: templates/index.html:148
+#: templates/index.html:93
 msgid "About us"
 msgstr "درباره ما"
 
-#: templates/index.html:149
+#: templates/index.html:94
 msgid ""
 "is a seasoned interior and exterior designer with over 20 years of "
 "experience. Renowned for his innovative designs, he leads a skilled team "
@@ -205,7 +243,7 @@ msgstr ""
 "طرح‌های نوآورانه‌اش مشهور است، رهبری یک تیم ماهر و متخصص در ساخت و ساز و "
 "نوسازی را بر عهده دارد."
 
-#: templates/index.html:150
+#: templates/index.html:95
 msgid ""
 "Together, they transform spaces into stunning environments, blending "
 "functionality with aesthetics to create unique, personalized settings for "
@@ -215,7 +253,7 @@ msgstr ""
 "کارایی و زیبایی‌شناسی، محیطی منحصر به فرد و شخصی‌سازی‌شده برای هر مشتری "
 "ایجاد می‌کنند."
 
-#: templates/index.html:189
+#: templates/index.html:134
 msgid ""
 "Architecture is the learned game, correct and magnificent, of forms "
 "assembled in the light."
@@ -223,23 +261,23 @@ msgstr ""
 "معماری بازی آموخته‌شده، صحیح و باشکوهِ فرم‌هایی است که در نور گرد هم "
 "آمده‌اند."
 
-#: templates/index.html:191
+#: templates/index.html:136
 msgid "Le Corbusier"
 msgstr "لو کوربوزیه"
 
-#: templates/index.html:198
+#: templates/index.html:143
 msgid "Good design is a lot like clear thinking made visual"
 msgstr "طراحی خوب بسیار شبیه تفکر واضحی است که به صورت بصری ساخته شده است"
 
-#: templates/index.html:200
+#: templates/index.html:145
 msgid "Ellen Lupton"
 msgstr "الن لوپتون"
 
-#: templates/index.html:207
+#: templates/index.html:152
 msgid "Architecture is the art of how to waste space"
 msgstr "معماری هنر چگونگی هدر دادن فضاست"
 
-#: templates/index.html:209
+#: templates/index.html:154
 msgid "Philip Johnson"
 msgstr "فیلیپ جانسون"
 

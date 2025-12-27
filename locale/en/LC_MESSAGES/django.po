@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-17 09:36+0330\n"
+"POT-Creation-Date: 2025-12-27 12:24+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,15 +18,40 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: core/settings/base.py:123
+#: analytics/models.py:43
+msgid "Mobile"
+msgstr ""
+
+#: analytics/models.py:44
+msgid "Tablet"
+msgstr ""
+
+#: analytics/models.py:45
+msgid "Desktop"
+msgstr ""
+
+#: analytics/models.py:46
+msgid "Bot"
+msgstr ""
+
+#: analytics/models.py:47
+msgid "Not applied"
+msgstr ""
+
+#: analytics/views.py:125
+msgid "Analytics"
+msgstr ""
+
+#: core/settings/base.py:127
 msgid "Farsi"
 msgstr ""
 
-#: core/settings/base.py:124
+#: core/settings/base.py:128
 msgid "English"
 msgstr ""
 
-#: generals/views.py:11 templates/_header.html:42 templates/_header_new.html:16
+#: generals/views.py:11 templates/404.html:15 templates/500.html:15
+#: templates/_header.html:42 templates/_header_new.html:16
 msgid "Home"
 msgstr ""
 
@@ -34,19 +59,19 @@ msgstr ""
 msgid "Our Featured Projects"
 msgstr ""
 
-#: projects/models.py:68 templates/projects/project_details_new.html:67
+#: projects/models.py:69 templates/projects/project_details_new.html:67
 msgid "Location"
 msgstr ""
 
-#: projects/models.py:71 templates/projects/project_details_new.html:75
+#: projects/models.py:72 templates/projects/project_details_new.html:75
 msgid "Completed date"
 msgstr ""
 
-#: projects/models.py:92 templates/projects/project_details_new.html:71
+#: projects/models.py:93 templates/projects/project_details_new.html:71
 msgid "Area"
 msgstr ""
 
-#: projects/models.py:106
+#: projects/models.py:107
 msgid "Rank"
 msgstr ""
 
@@ -62,36 +87,52 @@ msgstr ""
 msgid "Search results"
 msgstr ""
 
-#: templates/_base.html:12
+#: templates/404.html:6 templates/500.html:6 templates/_base.html:12
 msgid "InEx design"
 msgstr ""
 
-#: templates/_base.html:20
+#: templates/404.html:9
+msgid "404 Error"
+msgstr ""
+
+#: templates/404.html:14
+msgid "There is nothing here!"
+msgstr ""
+
+#: templates/500.html:9
+msgid "500 Error"
+msgstr ""
+
+#: templates/500.html:14
+msgid "There is something wrong in our server, please contact the admins"
+msgstr ""
+
+#: templates/_base.html:35
 msgid ""
 "Professional design and renovation services for stores, offices, and "
 "exhibition stands by Mahmoud Rahmatollahi"
 msgstr ""
 
-#: templates/_base.html:21
+#: templates/_base.html:36
 msgid ""
 "Interior Design, Store Design, Office Renovation, Exhibition Stand Design"
 msgstr ""
 
-#: templates/_base.html:22 templates/index.html:149
+#: templates/_base.html:37 templates/index.html:94
 msgid "Mahmoud Rahmatollahi"
 msgstr ""
 
-#: templates/_base.html:26
+#: templates/_base.html:41
 msgid "Store, Office & Exhibition Stand Design"
 msgstr ""
 
-#: templates/_base.html:27
+#: templates/_base.html:42
 msgid ""
 "Professional design and renovation services for stores, offices, and "
 "exhibition stands."
 msgstr ""
 
-#: templates/_base.html:177
+#: templates/_base.html:192
 msgid "Search"
 msgstr ""
 
@@ -169,47 +210,47 @@ msgid ""
 "vision. Transform your home’s exterior into a masterpiece today"
 msgstr ""
 
-#: templates/index.html:148
+#: templates/index.html:93
 msgid "About us"
 msgstr ""
 
-#: templates/index.html:149
+#: templates/index.html:94
 msgid ""
 "is a seasoned interior and exterior designer with over 20 years of "
 "experience. Renowned for his innovative designs, he leads a skilled team "
 "specializing in construction and renovation."
 msgstr ""
 
-#: templates/index.html:150
+#: templates/index.html:95
 msgid ""
 "Together, they transform spaces into stunning environments, blending "
 "functionality with aesthetics to create unique, personalized settings for "
 "every client."
 msgstr ""
 
-#: templates/index.html:189
+#: templates/index.html:134
 msgid ""
 "Architecture is the learned game, correct and magnificent, of forms "
 "assembled in the light."
 msgstr ""
 
-#: templates/index.html:191
+#: templates/index.html:136
 msgid "Le Corbusier"
 msgstr ""
 
-#: templates/index.html:198
+#: templates/index.html:143
 msgid "Good design is a lot like clear thinking made visual"
 msgstr ""
 
-#: templates/index.html:200
+#: templates/index.html:145
 msgid "Ellen Lupton"
 msgstr ""
 
-#: templates/index.html:207
+#: templates/index.html:152
 msgid "Architecture is the art of how to waste space"
 msgstr ""
 
-#: templates/index.html:209
+#: templates/index.html:154
 msgid "Philip Johnson"
 msgstr ""
 

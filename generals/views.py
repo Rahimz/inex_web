@@ -18,3 +18,22 @@ def HomeView(request):
         'index.html',
         context
     )
+
+
+
+
+def handler404(request, exception):
+    """
+    Custom 404 page view.
+    """
+    response = render(request, "404.html")
+    response.status_code = 404
+    return response
+
+def handler500(request):
+    """
+    Custom 500 page view.
+    """
+    response = render(request, "500.html")
+    response.status_code = 500
+    return response

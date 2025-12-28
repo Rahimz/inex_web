@@ -11,8 +11,14 @@ class AnalyticsMiddleware(MiddlewareMixin):
             # Gather request data
             ip_address = self.get_client_ip(request)
             requested_url = request.build_absolute_uri()
+            requested_url_origin = request.build_absolute_uri()
+            if len(requested_url_origin) > 200:
+                requested_url = requested_url_origin[:199]
+                
             user_agent = request.META.get('HTTP_USER_AGENT', '')
-            is_authenticated = request.user.is_authenticated
+            is_authenticated = False
+            if hasattr(request, 'user'):
+                is_authenticated = request.user.is_authenticated
             
             # Determine device type and OS
             user_agent_parsed = parse(user_agent)
@@ -36,10 +42,12 @@ class AnalyticsMiddleware(MiddlewareMixin):
                 user_agent=user_agent,
                 operating_system=operating_system,
                 device_type=device_type,
-                is_authenticated=is_authenticated
+                is_authenticated=is_authenticated,
+                requested_url_origin=requested_url_origin
             )
         except Exception as e:
             logger.error(f"Error logging request data: {e}")
+            # print(';;;;;;;;;;;', str(e))
             # Optionally handle the error or ignore it
 
     def get_client_ip(self, request):

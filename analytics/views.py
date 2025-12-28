@@ -84,9 +84,14 @@ def AnalyticsHomeView(request, filter=None, date=None, **kwargs):
             Q(requested_url__icontains=f"/projects/")
         )
         
-    if filter in ('store', 'office', 'restaurant', 'residential', 'exhibition', 'yektanet'):
+    if filter in ('store', 'office', 'restaurant', 'residential', 'exhibition', ):
         logs = logs.filter(
             requested_url__icontains=f"/projects/categories/{filter}/"
+            )
+    elif filter in ('yektanet', 'utm_yn_data'):
+        logs = logs.filter(
+            Q(requested_url__icontains=filter) | 
+            Q(requested_url_origin__icontains=filter)
             )
         
     if device and device != 'None':

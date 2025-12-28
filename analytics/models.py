@@ -49,6 +49,7 @@ class RequestLog(models.Model):
     datetime = models.DateTimeField(auto_now_add=True)    
     ip_address = models.GenericIPAddressField()
     requested_url = models.URLField()
+    requested_url_origin = models.TextField(blank=True)
     user_agent = models.TextField()
     operating_system = models.CharField(max_length=100, null=True, blank=True)
     device_type = models.CharField(max_length=10, choices=DeviceChoices.choices, default=DeviceChoices.NA)
